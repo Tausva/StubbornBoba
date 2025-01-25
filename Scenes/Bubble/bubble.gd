@@ -1,12 +1,15 @@
 class_name Bubble extends CharacterBody2D
 
+const gravity: float = 500
+
 @onready var dash_particles = $CPUParticles2D
 
-@export var speed:int = 50000
+@export var speed: int = 50000
 @export var dash_speed: int = 100000
 @export var dash_duration: float = 0.2
 @export var dash_cooldown: float = 5.0
-@export var jump_cooldown: float = 5.0
+@export var jump_cooldown: float = 1.0
+@export var jump_velocity: int = 800
 @export var collision_shape_water: CollisionShape2D 
 
 var is_dashing: bool = false
@@ -16,8 +19,8 @@ var dash_cooldown_timer: float = 0.0
 
 var jump_cooldown_timer: float = 0.0
 var can_jump: bool = false
-var jump_activated = false
-var is_above_water = false
+var jump_activated: bool = false
+var is_above_water: bool = false
 
 
 func _ready() -> void:
@@ -28,13 +31,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("bubble_left", "bubble_right", "bubble_up", "bubble_down")
 	
-	if jump_activated:
-		direction.y = 0 #reiks atnulinti
-	
-	if direction != Vector2.ZERO:
-		velocity = direction.normalized() * speed * delta
+	if !jump_activated:
+		if direction != Vector2.ZERO:
+			velocity = direction.normalized() * speed * delta
+		else:
+			velocity = Vector2.ZERO
 	else:
-		velocity = Vector2.ZERO
+		velocity.y += gravity * delta
+		velocity.x = direction.x * speed * delta
 	
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
@@ -81,40 +85,29 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if !area.is_in_group("water_filter"):
 		pass
 	
-	collision_shape_water.disabled = true
-	jump_activated = true
-	if can_jump:
-		print("ar tu ateini")
-		call_deferred("collision_shape_water_disabled")
-		can_jump = false
+	if can_jump and !jump_activated and !is_above_water:
+		call_deferred("_collision_shape_water_disabled")
 		jump_activated = true
-		is_above_water = true
-		jump_cooldown_timer = jump_cooldown
-	else: 
-		jump_activated = false
-
-	if jump_cooldown_timer <= 0:
-		call_deferred("collision_shape_water_enabled")
-		is_above_water = false
-	pass # Replace with function body.
+		velocity.y = -jump_velocity
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	#collision_shape_water_count += 1
-	#print(collision_shape_water_count)
-	#if collision_shape_water_count == 2 :
-	#	call_deferred("collision_shape_water_enabled")
-	#	collision_shape_water_count == 0
-	pass # Replace with function body.
+	if !area.is_in_group("water_filter"):
+		pass
+	
+	if !is_above_water and jump_activated:
+		is_above_water = true
+	elif jump_activated and is_above_water:
+		call_deferred("_collision_shape_water_enabled")
+		jump_activated = false
+		can_jump = false
+		is_above_water = false
+		jump_cooldown_timer = jump_cooldown
 
 
-func collision_shape_water_disabled() -> void:
+func _collision_shape_water_disabled() -> void:
 		collision_shape_water.disabled = true
 
 
-func collision_shape_water_enabled() -> void:
+func _collision_shape_water_enabled() -> void:
 	collision_shape_water.disabled = false
-
-
-#func collision_shape_exited() -> void:
-	#collision_shape_water.area

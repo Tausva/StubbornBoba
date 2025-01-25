@@ -10,10 +10,10 @@ radius = 27.0
 height = 1062.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lnrs"]
-size = Vector2(1107, 42.5)
+size = Vector2(1107, 136.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xekxu"]
-size = Vector2(1113, 48)
+size = Vector2(1113, 70)
 
 [node name="GameScene" type="Node2D"]
 
@@ -40,7 +40,7 @@ position = Vector2(1167, 220)
 shape = SubResource("CapsuleShape2D_7y6dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
-position = Vector2(583, 320.25)
+position = Vector2(583, 273.25)
 shape = SubResource("RectangleShape2D_3lnrs")
 debug_color = Color(0.940823, 0.231442, 0.202422, 0.42)
 
@@ -48,7 +48,7 @@ debug_color = Color(0.940823, 0.231442, 0.202422, 0.42)
 position = Vector2(232, 240)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["water_filter"]]
-position = Vector2(350, 127)
+position = Vector2(350, 138)
 shape = SubResource("RectangleShape2D_xekxu")
 
 [connection signal="area_entered" from="Area2D" to="Bubble" method="_on_area_2d_area_entered"]
