@@ -10,8 +10,8 @@ const gravity: float = 500
 @export var dash_cooldown: float = 5.0
 @export var jump_cooldown: float = 1.0
 @export var jump_velocity: int = 800
-@export var collision_shape_water: CollisionShape2D 
 
+var collision_shape_water: CollisionShape2D
 var is_dashing: bool = false
 var dash_direction: Vector2 = Vector2.ZERO
 var dash_timer: float = 0.0 
@@ -25,7 +25,8 @@ var is_above_water: bool = false
 
 func _ready() -> void:
 	dash_particles.emitting = false
-	dash_particles.texture =$Sprite2D.texture
+	dash_particles.texture = $Sprite2D.texture
+	collision_shape_water = get_tree().get_first_node_in_group("baba_no_go_zone")
 
 
 func _physics_process(delta: float) -> void:
@@ -106,7 +107,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 
 func _collision_shape_water_disabled() -> void:
-		collision_shape_water.disabled = true
+	collision_shape_water.disabled = true
 
 
 func _collision_shape_water_enabled() -> void:

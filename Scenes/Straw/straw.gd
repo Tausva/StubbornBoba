@@ -17,6 +17,7 @@ signal sucked
 var sprite_half_height: float
 var can_suck: bool = true
 var cup: Cup = null
+var bubble: Bubble = null
 var sucking: bool = false
 
 
@@ -62,6 +63,10 @@ func _suck() -> void:
 	
 	if cup:
 		cup.drain(drain_amuont)
+	
+	if bubble:
+		bubble.die()
+		sucked.emit()
 
 
 func _emit_sucking_particles() -> void:
@@ -71,11 +76,15 @@ func _emit_sucking_particles() -> void:
 func _on_sucking_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("tea"):
 		cup = area.get_parent()
+	elif area.get_parent() is Bubble:
+		bubble = area.get_parent()
 
 
 func _on_sucking_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("tea"):
 		cup = null
+	elif area.get_parent() is Bubble:
+		bubble = null
 
 
 func _on_suck_cooldown_timeout() -> void:
@@ -86,10 +95,3 @@ func _on_suck_duration_timer_timeout() -> void:
 	can_suck = false
 	cpu_particles.emitting = false
 	suck_cooldown_timer.start(suck_timeout_duration)
-
-
-func _on_sucking_area_body_entered(body: Node2D) -> void:
-	if body is Bubble and sucking:
-		(body as Bubble).die()
-		sucked.emit()
-		#sucking animation

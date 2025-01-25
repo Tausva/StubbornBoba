@@ -12,6 +12,7 @@ radius = 46.0109
 radius = 46.0977
 
 [node name="Bubble" type="CharacterBody2D"]
+collision_mask = 12
 script = ExtResource("1_1jhyk")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -34,6 +35,8 @@ color_ramp = SubResource("Gradient_iycsv")
 texture = ExtResource("2_mkwq5")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 17
+collision_mask = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_a25ld")
@@ -43,3 +46,6 @@ debug_color = Color(0, 0.0745098, 0.701961, 0.419608)
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8hhyj")
 debug_color = Color(0.364639, 0.616593, 1.15514e-06, 0.42)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

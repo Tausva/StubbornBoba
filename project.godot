@@ -19,7 +19,11 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
+
+[global_group]
+
+water_filter=""
+baba_no_go_zone=""
 
 [input]
 
@@ -76,4 +80,8 @@ straw_suck={
 
 [layer_names]
 
-2d_physics/layer_1="Borders"
+2d_physics/layer_1="Boba"
+2d_physics/layer_2="Straw"
+2d_physics/layer_3="BobaInteractions"
+2d_physics/layer_4="Borders"
+2d_physics/layer_5="StrawInteractions"

@@ -17,9 +17,8 @@ size = Vector2(1113, 70)
 
 [node name="GameScene" type="Node2D"]
 
-[node name="Bubble" parent="." node_paths=PackedStringArray("collision_shape_water") instance=ExtResource("1_0x3hu")]
+[node name="Bubble" parent="." instance=ExtResource("1_0x3hu")]
 position = Vector2(690, 461)
-collision_shape_water = NodePath("../Borders/CollisionShape2D")
 
 [node name="Borders" type="StaticBody2D" parent="."]
 

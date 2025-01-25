@@ -1,15 +1,231 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6sx8glb5y6bg"]
+[gd_scene load_steps=59 format=3 uid="uid://c6sx8glb5y6bg"]
 
 [ext_resource type="Script" path="res://Scenes/Cup/cup.gd" id="1_1japy"]
 [ext_resource type="Texture2D" uid="uid://cl4s762f2inkd" path="res://Scenes/Cup/Puodelio pagrindas.png" id="2_sr4ki"]
 [ext_resource type="Texture2D" uid="uid://dxq47opr4q1a2" path="res://Scenes/Cup/tea_filling_square.png" id="3_6k3l2"]
+[ext_resource type="Texture2D" uid="uid://dm5swidf4ybku" path="res://Scenes/Cup/tea surface seq/tea surface_00000.png" id="4_s6b8s"]
 [ext_resource type="Texture2D" uid="uid://cxjr2bp42y1lo" path="res://Scenes/Cup/Puodelio isore.png" id="4_xukgq"]
+[ext_resource type="Texture2D" uid="uid://b2siqpsgsycym" path="res://Scenes/Cup/tea surface seq/tea surface_00001.png" id="5_x3bde"]
+[ext_resource type="Texture2D" uid="uid://vxpvj38f8817" path="res://Scenes/Cup/tea surface seq/tea surface_00002.png" id="6_71t7x"]
+[ext_resource type="Texture2D" uid="uid://bqvidktrix4tf" path="res://Scenes/Cup/tea surface seq/tea surface_00003.png" id="7_r5dce"]
+[ext_resource type="Texture2D" uid="uid://c8q4we5bvvt2m" path="res://Scenes/Cup/tea surface seq/tea surface_00004.png" id="8_hxmyl"]
+[ext_resource type="Texture2D" uid="uid://3qxmbyfd8kop" path="res://Scenes/Cup/tea surface seq/tea surface_00005.png" id="9_6vgy7"]
+[ext_resource type="Texture2D" uid="uid://c1awr3rh72ev" path="res://Scenes/Cup/tea surface seq/tea surface_00006.png" id="10_veiwm"]
+[ext_resource type="Texture2D" uid="uid://01w0p3rdfh5d" path="res://Scenes/Cup/tea surface seq/tea surface_00007.png" id="11_6oksr"]
+[ext_resource type="Texture2D" uid="uid://wg4gkqq4dcfk" path="res://Scenes/Cup/tea surface seq/tea surface_00008.png" id="12_66hdi"]
+[ext_resource type="Texture2D" uid="uid://cuovucg82qfst" path="res://Scenes/Cup/tea surface seq/tea surface_00009.png" id="13_nxjdt"]
+[ext_resource type="Texture2D" uid="uid://dywfdc88c6q4g" path="res://Scenes/Cup/tea surface seq/tea surface_00010.png" id="14_c110w"]
+[ext_resource type="Texture2D" uid="uid://c7fk2v2n4x3d4" path="res://Scenes/Cup/tea surface seq/tea surface_00011.png" id="15_f7w86"]
+[ext_resource type="Texture2D" uid="uid://bsrrthnxkvlhq" path="res://Scenes/Cup/tea surface seq/tea surface_00012.png" id="16_n5qal"]
+[ext_resource type="Texture2D" uid="uid://chf5r0pdsymag" path="res://Scenes/Cup/tea surface seq/tea surface_00013.png" id="17_1008o"]
+[ext_resource type="Texture2D" uid="uid://dtb5i8o3x1kgq" path="res://Scenes/Cup/tea surface seq/tea surface_00014.png" id="18_845so"]
+[ext_resource type="Texture2D" uid="uid://boidtd6b438ka" path="res://Scenes/Cup/tea surface seq/tea surface_00015.png" id="19_gomf6"]
+[ext_resource type="Texture2D" uid="uid://cfd16uc0y5ijn" path="res://Scenes/Cup/tea surface seq/tea surface_00016.png" id="20_7urwr"]
+[ext_resource type="Texture2D" uid="uid://bnfdwb8c8hqh1" path="res://Scenes/Cup/tea surface seq/tea surface_00017.png" id="21_xki1d"]
+[ext_resource type="Texture2D" uid="uid://7ujbmv4gqi" path="res://Scenes/Cup/tea surface seq/tea surface_00018.png" id="22_b3nqr"]
+[ext_resource type="Texture2D" uid="uid://cf1eefkchlxxi" path="res://Scenes/Cup/tea surface seq/tea surface_00019.png" id="23_r3f1o"]
+[ext_resource type="Texture2D" uid="uid://b2mkew7r4xne" path="res://Scenes/Cup/tea surface seq/tea surface_00020.png" id="24_2qmfe"]
+[ext_resource type="Texture2D" uid="uid://wgib0e8nndo4" path="res://Scenes/Cup/tea surface seq/tea surface_00021.png" id="25_fxapa"]
+[ext_resource type="Texture2D" uid="uid://bqrpsarce8554" path="res://Scenes/Cup/tea surface seq/tea surface_00022.png" id="26_omxox"]
+[ext_resource type="Texture2D" uid="uid://cjhpbqss3jma5" path="res://Scenes/Cup/tea surface seq/tea surface_00023.png" id="27_atgom"]
+[ext_resource type="Texture2D" uid="uid://bfdfgwvgu8ou1" path="res://Scenes/Cup/tea surface seq/tea surface_00024.png" id="28_llpak"]
+[ext_resource type="Texture2D" uid="uid://cnufou8nh6vau" path="res://Scenes/Cup/tea surface seq/tea surface_00025.png" id="29_gxph7"]
+[ext_resource type="Texture2D" uid="uid://bh3vfku6u8j2w" path="res://Scenes/Cup/tea surface seq/tea surface_00026.png" id="30_odp4u"]
+[ext_resource type="Texture2D" uid="uid://bff87hrt7dxdm" path="res://Scenes/Cup/tea surface seq/tea surface_00027.png" id="31_cw4v4"]
+[ext_resource type="Texture2D" uid="uid://um8swbaqu5ww" path="res://Scenes/Cup/tea surface seq/tea surface_00028.png" id="32_d0sbn"]
+[ext_resource type="Texture2D" uid="uid://dxp8ittkbed6j" path="res://Scenes/Cup/tea surface seq/tea surface_00029.png" id="33_mjso2"]
+[ext_resource type="Texture2D" uid="uid://mv5y4awt57uf" path="res://Scenes/Cup/tea surface seq/tea surface_00030.png" id="34_ha07n"]
+[ext_resource type="Texture2D" uid="uid://dpsh7vbmr01g3" path="res://Scenes/Cup/tea surface seq/tea surface_00031.png" id="35_cu2df"]
+[ext_resource type="Texture2D" uid="uid://bq8coe1ooiao2" path="res://Scenes/Cup/tea surface seq/tea surface_00032.png" id="36_aqtiq"]
+[ext_resource type="Texture2D" uid="uid://buxetc0qkem30" path="res://Scenes/Cup/tea surface seq/tea surface_00033.png" id="37_c2kcg"]
+[ext_resource type="Texture2D" uid="uid://boao0du01kvjs" path="res://Scenes/Cup/tea surface seq/tea surface_00034.png" id="38_dvric"]
+[ext_resource type="Texture2D" uid="uid://hv6oh7jd2qen" path="res://Scenes/Cup/tea surface seq/tea surface_00035.png" id="39_c0npr"]
+[ext_resource type="Texture2D" uid="uid://drlli4bs5i873" path="res://Scenes/Cup/tea surface seq/tea surface_00036.png" id="40_or5go"]
+[ext_resource type="Texture2D" uid="uid://dt3orikfqrwgk" path="res://Scenes/Cup/tea surface seq/tea surface_00037.png" id="41_x1u12"]
+[ext_resource type="Texture2D" uid="uid://jn1jcsqxx1co" path="res://Scenes/Cup/tea surface seq/tea surface_00038.png" id="42_xjppf"]
+[ext_resource type="Texture2D" uid="uid://bdqlfx45umfes" path="res://Scenes/Cup/tea surface seq/tea surface_00039.png" id="43_jhvao"]
+[ext_resource type="Texture2D" uid="uid://pmtvyfdmn7i4" path="res://Scenes/Cup/tea surface seq/tea surface_00040.png" id="44_nkiwn"]
+[ext_resource type="Texture2D" uid="uid://mtu8qxhjt5my" path="res://Scenes/Cup/tea surface seq/tea surface_00041.png" id="45_o5uy7"]
+[ext_resource type="Texture2D" uid="uid://bn4rvhdj8hcx5" path="res://Scenes/Cup/tea surface seq/tea surface_00042.png" id="46_7dsx4"]
+[ext_resource type="Texture2D" uid="uid://cpxbl2dg32j7y" path="res://Scenes/Cup/tea surface seq/tea surface_00043.png" id="47_n0axk"]
+[ext_resource type="Texture2D" uid="uid://ctkbpj7wk83u1" path="res://Scenes/Cup/tea surface seq/tea surface_00044.png" id="48_648n6"]
+[ext_resource type="Texture2D" uid="uid://c5pmjiknqv82r" path="res://Scenes/Cup/tea surface seq/tea surface_00045.png" id="49_485j3"]
+[ext_resource type="Texture2D" uid="uid://cpglth2rmxetm" path="res://Scenes/Cup/tea surface seq/tea surface_00046.png" id="50_maf50"]
+[ext_resource type="Texture2D" uid="uid://pe6dvt21c4lx" path="res://Scenes/Cup/tea surface seq/tea surface_00047.png" id="51_n2s22"]
+[ext_resource type="Texture2D" uid="uid://bwx0hhphj3h3c" path="res://Scenes/Cup/tea surface seq/tea surface_00048.png" id="52_gop06"]
+[ext_resource type="Texture2D" uid="uid://gvix63bvc0v" path="res://Scenes/Cup/tea surface seq/tea surface_00049.png" id="53_k7qhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
 size = Vector2(734.559, 900)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vjs3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_s6b8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x3bde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_71t7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r5dce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hxmyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6vgy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_veiwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6oksr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_66hdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nxjdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c110w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f7w86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n5qal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1008o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_845so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gomf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7urwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xki1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_b3nqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_r3f1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2qmfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fxapa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_omxox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_atgom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_llpak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_gxph7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_odp4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cw4v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_d0sbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mjso2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ha07n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_cu2df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_aqtiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_c2kcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dvric")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_c0npr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_or5go")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_x1u12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xjppf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jhvao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_nkiwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_o5uy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7dsx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_n0axk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_648n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_485j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_maf50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_n2s22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gop06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_k7qhk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcj8r"]
+size = Vector2(778.833, 42.7602)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j21p3"]
+size = Vector2(784.871, 71.4266)
+
 [node name="Cup" type="StaticBody2D" groups=["border"]]
 scale = Vector2(0.993794, 0.976781)
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_1japy")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
@@ -18,6 +234,8 @@ scale = Vector2(1, 1.00427)
 polygon = PackedVector2Array(-50.3122, 149.854, -168.043, -798.202, 520.228, -798.202, 441.741, 140.679, -50.3122, 149.854, -69.4309, 170.242, 460.86, 160.048, 542.366, -827.765, -190.18, -821.648, -69.4309, 170.242)
 
 [node name="Tea" type="Area2D" parent="." groups=["tea"]]
+collision_layer = 16
+collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Tea"]
 position = Vector2(250.555, -451.483)
@@ -29,12 +247,33 @@ position = Vector2(246.53, -527.242)
 texture = ExtResource("2_sr4ki")
 
 [node name="TeaSprite" type="Sprite2D" parent="Tea/CupShapeSprite"]
-modulate = Color(0.546657, 0.321078, 0, 0.364706)
 position = Vector2(20.1249, 78.8304)
 scale = Vector2(2, 1)
 texture = ExtResource("3_6k3l2")
+
+[node name="SurfaceWaves" type="AnimatedSprite2D" parent="Tea/CupShapeSprite"]
+position = Vector2(15.0936, -446.364)
+sprite_frames = SubResource("SpriteFrames_3vjs3")
+autoplay = "default"
+frame_progress = 0.367897
 
 [node name="Outline" type="Sprite2D" parent="."]
 z_index = 10
 position = Vector2(248.542, -525.195)
 texture = ExtResource("4_xukgq")
+
+[node name="BobaActivationZone" type="Area2D" parent="." groups=["water_filter"]]
+position = Vector2(253.574, -880.324)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BobaActivationZone" groups=["water_filter"]]
+shape = SubResource("RectangleShape2D_pcj8r")
+debug_color = Color(7.60466e-06, 0.864472, 0.229935, 0.42)
+
+[node name="BobaNoGoZone" type="StaticBody2D" parent="."]
+position = Vector2(253.574, -940.964)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BobaNoGoZone" groups=["baba_no_go_zone"]]
+shape = SubResource("RectangleShape2D_j21p3")
+debug_color = Color(0.935043, 0.177958, 0.464492, 0.42)

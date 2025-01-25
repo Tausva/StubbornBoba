@@ -12,6 +12,8 @@ radius = 26.93
 colors = PackedColorArray(0.988235, 0.866667, 0.792157, 1, 0.988235, 0.866667, 0.792157, 0)
 
 [node name="Straw" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 8
 script = ExtResource("1_er2tw")
 speed = 20000
 
@@ -22,6 +24,8 @@ texture = ExtResource("2_dlx1f")
 shape = SubResource("CircleShape2D_htlp6")
 
 [node name="SuckingArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SuckingArea"]
 shape = SubResource("CircleShape2D_h1png")
@@ -53,6 +57,5 @@ color_ramp = SubResource("Gradient_0nq4a")
 
 [connection signal="area_entered" from="SuckingArea" to="." method="_on_sucking_area_area_entered"]
 [connection signal="area_exited" from="SuckingArea" to="." method="_on_sucking_area_area_exited"]
-[connection signal="body_entered" from="SuckingArea" to="." method="_on_sucking_area_body_entered"]
 [connection signal="timeout" from="SuckCooldownTimer" to="." method="_on_suck_cooldown_timeout"]
 [connection signal="timeout" from="SuckDurationTimer" to="." method="_on_suck_duration_timer_timeout"]
