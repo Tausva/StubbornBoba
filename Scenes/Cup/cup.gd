@@ -18,12 +18,6 @@ func _ready() -> void:
 	original_tea_sprite_scale = tea_sprite.scale.y
 
 
-func _process(delta: float) -> void: # testing, delet
-	if Input.is_key_pressed(KEY_F):
-		drain(0.01)
-		print(str(original_tea_height) + " " + str(tea_collision_shape.position) + " " + str((tea_collision_shape.shape as RectangleShape2D).size.y))
-
-
 func drain(percentage: float) -> void:
 	fill_percentage -= percentage
 	

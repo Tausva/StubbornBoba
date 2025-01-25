@@ -7,7 +7,7 @@
 
 [node name="Straw" parent="." node_paths=PackedStringArray("puncture_point") instance=ExtResource("2_vlxw4")]
 position = Vector2(586, 279)
-speed = 400
+speed = 40000
 puncture_point = NodePath("../PuncturePoint")
 
 [node name="PuncturePoint" type="Node2D" parent="."]

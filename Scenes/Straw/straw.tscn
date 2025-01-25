@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbvxk17w5bho3"]
+[gd_scene load_steps=5 format=3 uid="uid://dbvxk17w5bho3"]
 
 [ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
 [ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_7a4fe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htlp6"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_h1png"]
+radius = 26.93
+
 [node name="Straw" type="CharacterBody2D"]
 script = ExtResource("1_er2tw")
+speed = 20000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.222, 3)
@@ -14,3 +18,20 @@ texture = ExtResource("2_7a4fe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_htlp6")
+
+[node name="SuckingArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuckingArea"]
+shape = SubResource("CircleShape2D_h1png")
+debug_color = Color(0.58322, 0.40064, 0.958147, 0.42)
+
+[node name="SuckCooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SuckDurationTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="SuckingArea" to="." method="_on_sucking_area_area_entered"]
+[connection signal="area_exited" from="SuckingArea" to="." method="_on_sucking_area_area_exited"]
+[connection signal="timeout" from="SuckCooldownTimer" to="." method="_on_suck_cooldown_timeout"]
+[connection signal="timeout" from="SuckDurationTimer" to="." method="_on_suck_duration_timer_timeout"]
