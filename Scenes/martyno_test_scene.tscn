@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://do64xy57h3bfk"]
+
+[ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/bubble.tscn" id="1_8h56p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3six"]
+size = Vector2(1164, 29)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y6dp"]
+radius = 27.0
+height = 1062.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lnrs"]
+size = Vector2(1107, 187)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xekxu"]
+size = Vector2(1113, 48)
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Bubble" parent="." node_paths=PackedStringArray("collision_shape_water") instance=ExtResource("1_8h56p")]
+position = Vector2(690, 461)
+collision_shape_water = NodePath("../Borders/CollisionShape2D")
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2DHorizontal" type="CollisionShape2D" parent="Borders"]
+position = Vector2(571, -1)
+shape = SubResource("RectangleShape2D_n3six")
+
+[node name="CollisionShape2DHorizontal2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(575, 647)
+shape = SubResource("RectangleShape2D_n3six")
+
+[node name="CollisionShape2DVertical" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-1, 268)
+shape = SubResource("CapsuleShape2D_7y6dp")
+
+[node name="CollisionShape2DVertical2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1167, 220)
+shape = SubResource("CapsuleShape2D_7y6dp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(577, 99)
+shape = SubResource("RectangleShape2D_3lnrs")
+debug_color = Color(0.940823, 0.231442, 0.202422, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(232, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(350, 127)
+shape = SubResource("RectangleShape2D_xekxu")
+
+[connection signal="area_entered" from="Area2D" to="Bubble" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Bubble" method="_on_area_2d_area_exited"]
