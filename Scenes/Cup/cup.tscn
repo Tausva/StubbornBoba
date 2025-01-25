@@ -6,14 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
 size = Vector2(360, 600)
 
-[node name="Cup" type="Area2D"]
+[node name="Cup" type="StaticBody2D" groups=["border"]]
 scale = Vector2(0.993794, 0.976781)
 script = ExtResource("1_1japy")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(30, 0, 0, -600, 360, -600, 330, 0)
+scale = Vector2(1, 1.00427)
+polygon = PackedVector2Array(30, 0, 0, -600, 360, -600, 330, 0, 30, 0, 10, 20, 350, 20, 380, -620, -20, -620, 10, 20)
 
-[node name="Tea" type="Area2D" parent="."]
+[node name="Tea" type="Area2D" parent="." groups=["tea"]]
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Tea"]
 position = Vector2(180, -300)

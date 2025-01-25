@@ -1,4 +1,4 @@
-class_name Cup extends Area2D
+class_name Cup extends StaticBody2D
 
 signal empty
 

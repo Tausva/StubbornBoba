@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbvxk17w5bho3"]
+[gd_scene load_steps=4 format=3 uid="uid://dbvxk17w5bho3"]
 
 [ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
 [ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_7a4fe"]
 
-[node name="Straw" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_htlp6"]
+
+[node name="Straw" type="CharacterBody2D"]
 script = ExtResource("1_er2tw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.222, 3)
 texture = ExtResource("2_7a4fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_htlp6")
