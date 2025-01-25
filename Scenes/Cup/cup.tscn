@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6sx8glb5y6bg"]
+
+[ext_resource type="Script" path="res://Scenes/Cup/cup.gd" id="1_1japy"]
+[ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_mqvxm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
+size = Vector2(360, 600)
+
+[node name="Cup" type="Area2D"]
+scale = Vector2(0.993794, 0.976781)
+script = ExtResource("1_1japy")
+
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(30, 0, 0, -600, 360, -600, 330, 0)
+
+[node name="Tea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tea"]
+position = Vector2(180, -300)
+shape = SubResource("RectangleShape2D_mcdyu")
+
+[node name="TextureRect" type="TextureRect" parent="Tea"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(8.92921, -14.9708)
+texture = ExtResource("2_mqvxm")
+stretch_mode = 1
