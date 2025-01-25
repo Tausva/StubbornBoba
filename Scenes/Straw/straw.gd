@@ -12,11 +12,11 @@ func _ready() -> void:
 	sprite_half_height = sprite.texture.get_height() * sprite.scale.y / 2
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("straw_left", "straw_right", "straw_up", "straw_down")
 	direction = (direction as Vector2).normalized()
 	if direction:
-		velocity = speed * direction
+		velocity = speed * direction * delta
 	else:
 		velocity = Vector2.ZERO
 	
