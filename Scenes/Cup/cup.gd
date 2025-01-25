@@ -35,4 +35,3 @@ func _update_play_area() -> void:
 	var position_to_go = cup_shape_sprite.position.y / cup_shape_sprite.scale.y * -1
 	tea_sprite.scale.y = original_tea_sprite_scale * fill_percentage
 	tea_sprite.position.y = position_to_go - position_to_go * fill_percentage
-	

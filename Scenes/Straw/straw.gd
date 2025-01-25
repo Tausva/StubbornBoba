@@ -1,5 +1,7 @@
 class_name Straw extends CharacterBody2D
 
+signal sucked
+
 @export var speed: int = 200
 @export var puncture_point: Node2D
 @export var suck_timeout_duration: float = 2
@@ -71,3 +73,10 @@ func _on_suck_cooldown_timeout() -> void:
 func _on_suck_duration_timer_timeout() -> void:
 	can_suck = false
 	suck_cooldown_timer.start(suck_timeout_duration)
+
+
+func _on_sucking_area_body_entered(body: Node2D) -> void:
+	if body is Bubble and sucking:
+		(body as Bubble).die()
+		sucked.emit()
+		#sucking animation

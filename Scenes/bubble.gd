@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Bubble extends CharacterBody2D
 
 @onready var dash_particles = $CPUParticles2D
 
@@ -46,6 +46,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("bubble_dash") and cooldown_timer <= 0 and direction != Vector2.ZERO:
 		_start_dash(direction)
 	move_and_slide()
+
+
+func die() -> void:
+	print("uwu, I am dead step developer")
 
 
 func _start_dash(direction: Vector2) -> void:
