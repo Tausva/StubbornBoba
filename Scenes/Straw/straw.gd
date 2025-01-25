@@ -9,7 +9,7 @@ signal sucked
 @export var drain_amuont: float = .01
 @export var sucking_speed_modifier: float = .7
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var suck_cooldown_timer: Timer = $SuckCooldownTimer
 @onready var suck_duration_timer: Timer = $SuckDurationTimer
 @onready var cpu_particles: CPUParticles2D = $CPUParticles2D
@@ -22,7 +22,12 @@ var sucking: bool = false
 
 
 func _ready() -> void:
-	sprite_half_height = sprite.texture.get_height() * sprite.scale.y / 2
+	var frameIndex: int = animated_sprite.get_frame()
+	var animationName: String = animated_sprite.animation
+	var spriteFrames: SpriteFrames = animated_sprite.get_sprite_frames()
+	var currentTexture: Texture2D = spriteFrames.get_frame_texture(animationName, frameIndex)
+
+	sprite_half_height = currentTexture.get_height() * animated_sprite.scale.y / 2
 
 
 func _physics_process(delta: float) -> void:
@@ -40,10 +45,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	var sprite_direction: Vector2 = global_position.direction_to(puncture_point.global_position)
-	sprite.position = sprite_direction * sprite_half_height
+	animated_sprite.position = sprite_direction * sprite_half_height
 	
 	var sprite_angle: float = puncture_point.global_position.angle_to_point(global_position)
-	sprite.rotation = sprite_angle + deg_to_rad(-90)
+	animated_sprite.rotation = sprite_angle + deg_to_rad(-90)
 	
 	if can_suck and Input.get_action_strength("straw_suck"):
 		sucking = true
@@ -67,6 +72,10 @@ func _suck() -> void:
 	if bubble:
 		bubble.die()
 		sucked.emit()
+		animated_sprite.play("suck")
+		can_suck = false
+		suck_cooldown_timer.stop()
+		suck_duration_timer.stop()
 
 
 func _emit_sucking_particles() -> void:

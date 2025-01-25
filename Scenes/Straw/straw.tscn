@@ -1,7 +1,135 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbvxk17w5bho3"]
+[gd_scene load_steps=35 format=3 uid="uid://dbvxk17w5bho3"]
 
 [ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
 [ext_resource type="Texture2D" uid="uid://dhkrrcremqb4t" path="res://Scenes/Straw/straw.png" id="2_dlx1f"]
+[ext_resource type="Texture2D" uid="uid://bofdfnxruqqqa" path="res://Scenes/Straw/straw suck seq/straw_00000.png" id="3_cbe80"]
+[ext_resource type="Texture2D" uid="uid://6x1aaeb4mous" path="res://Scenes/Straw/straw suck seq/straw_00001.png" id="4_fkvv5"]
+[ext_resource type="Texture2D" uid="uid://bnat4adoyi7or" path="res://Scenes/Straw/straw suck seq/straw_00002.png" id="5_3brqk"]
+[ext_resource type="Texture2D" uid="uid://domrtibumnr8c" path="res://Scenes/Straw/straw suck seq/straw_00003.png" id="6_nr0hj"]
+[ext_resource type="Texture2D" uid="uid://bpipkyhhaysfe" path="res://Scenes/Straw/straw suck seq/straw_00004.png" id="7_64u3s"]
+[ext_resource type="Texture2D" uid="uid://cs5m2k0qldipc" path="res://Scenes/Straw/straw suck seq/straw_00005.png" id="8_2v3hv"]
+[ext_resource type="Texture2D" uid="uid://b42r3nup6ugk6" path="res://Scenes/Straw/straw suck seq/straw_00006.png" id="9_fwinb"]
+[ext_resource type="Texture2D" uid="uid://4uw2p4mukafw" path="res://Scenes/Straw/straw suck seq/straw_00007.png" id="10_0aphf"]
+[ext_resource type="Texture2D" uid="uid://kbkaceidmu5m" path="res://Scenes/Straw/straw suck seq/straw_00008.png" id="11_vomuy"]
+[ext_resource type="Texture2D" uid="uid://chcrd5ewvwj67" path="res://Scenes/Straw/straw suck seq/straw_00009.png" id="12_cldkn"]
+[ext_resource type="Texture2D" uid="uid://bwmhedsqwp57t" path="res://Scenes/Straw/straw suck seq/straw_00010.png" id="13_ueegf"]
+[ext_resource type="Texture2D" uid="uid://csijghbehtbhc" path="res://Scenes/Straw/straw suck seq/straw_00011.png" id="14_lvpui"]
+[ext_resource type="Texture2D" uid="uid://dgfns3uyq5t4u" path="res://Scenes/Straw/straw suck seq/straw_00012.png" id="15_tspfm"]
+[ext_resource type="Texture2D" uid="uid://dnqj5bp6i3ctt" path="res://Scenes/Straw/straw suck seq/straw_00013.png" id="16_460tt"]
+[ext_resource type="Texture2D" uid="uid://c3ro2b7clge2y" path="res://Scenes/Straw/straw suck seq/straw_00014.png" id="17_4axhr"]
+[ext_resource type="Texture2D" uid="uid://oq67m6kft5cs" path="res://Scenes/Straw/straw suck seq/straw_00015.png" id="18_4fo6a"]
+[ext_resource type="Texture2D" uid="uid://dhqe2ugodbfbo" path="res://Scenes/Straw/straw suck seq/straw_00016.png" id="19_6gcsh"]
+[ext_resource type="Texture2D" uid="uid://dftx4hfcrmx0w" path="res://Scenes/Straw/straw suck seq/straw_00017.png" id="20_tye07"]
+[ext_resource type="Texture2D" uid="uid://wmw827ijl6b0" path="res://Scenes/Straw/straw suck seq/straw_00018.png" id="21_sicln"]
+[ext_resource type="Texture2D" uid="uid://dw8l1rkc8doo8" path="res://Scenes/Straw/straw suck seq/straw_00019.png" id="22_hi4ma"]
+[ext_resource type="Texture2D" uid="uid://lijprcpkt4s3" path="res://Scenes/Straw/straw suck seq/straw_00020.png" id="23_0kcwo"]
+[ext_resource type="Texture2D" uid="uid://ds1yx7spfybfu" path="res://Scenes/Straw/straw suck seq/straw_00021.png" id="24_ctr5b"]
+[ext_resource type="Texture2D" uid="uid://ue4arjxkc0cc" path="res://Scenes/Straw/straw suck seq/straw_00022.png" id="25_q0syl"]
+[ext_resource type="Texture2D" uid="uid://brxr552e12cfe" path="res://Scenes/Straw/straw suck seq/straw_00023.png" id="26_72hif"]
+[ext_resource type="Texture2D" uid="uid://6p0td0u6lgwp" path="res://Scenes/Straw/straw suck seq/straw_00024.png" id="27_fm4xq"]
+[ext_resource type="Texture2D" uid="uid://dydpcx2ap8kjk" path="res://Scenes/Straw/straw suck seq/straw_00025.png" id="28_vph4o"]
+[ext_resource type="Texture2D" uid="uid://dn5idqq3dlqk3" path="res://Scenes/Straw/straw suck seq/straw_00026.png" id="29_rp2w8"]
+[ext_resource type="Texture2D" uid="uid://bbw5jfi3efhnk" path="res://Scenes/Straw/straw suck seq/straw_00027.png" id="30_i87pb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5j15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dlx1f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cbe80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fkvv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3brqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nr0hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_64u3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2v3hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fwinb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0aphf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vomuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cldkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ueegf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lvpui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tspfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_460tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4axhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4fo6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6gcsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tye07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sicln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_hi4ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0kcwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ctr5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_q0syl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_72hif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fm4xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vph4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rp2w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_i87pb")
+}],
+"loop": false,
+"name": &"suck",
+"speed": 25.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htlp6"]
 
@@ -17,8 +145,9 @@ collision_mask = 8
 script = ExtResource("1_er2tw")
 speed = 20000
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_dlx1f")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -554)
+sprite_frames = SubResource("SpriteFrames_h5j15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_htlp6")

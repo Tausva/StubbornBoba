@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 
 
 func die() -> void:
-	print("uwu, I am dead step developer")
+	queue_free()
 
 
 func _start_dash(direction: Vector2) -> void:

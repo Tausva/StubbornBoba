@@ -11,13 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
 
 [node name="GameScene" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_wrqjr")
 
 [node name="Background" type="Sprite2D" parent="."]
+process_mode = 1
 texture = ExtResource("1_ianr0")
 centered = false
 
 [node name="Playground" type="Node" parent="."]
+process_mode = 1
 
 [node name="ControlsUI" type="Node" parent="Playground"]
 
@@ -37,18 +40,24 @@ texture = ExtResource("4_14gqq")
 position = Vector2(728, 1057)
 
 [node name="Straw" parent="Playground" node_paths=PackedStringArray("puncture_point") instance=ExtResource("7_2x8q1")]
-position = Vector2(909, 478)
+position = Vector2(977, 436)
 puncture_point = NodePath("../PuncturePoint")
 
 [node name="PuncturePoint" type="Node2D" parent="Playground"]
 position = Vector2(977, 55)
 
 [node name="Bubble" parent="Playground" instance=ExtResource("8_r4hmp")]
-position = Vector2(1118, 968)
+position = Vector2(978, 898)
 
 [node name="Foreground" type="Node" parent="."]
+process_mode = 1
 
 [node name="PPG_Bubble" type="Sprite2D" parent="Foreground"]
 z_index = 11
 position = Vector2(334, 500)
 texture = ExtResource("6_3gmor")
+
+[node name="IntroTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="IntroTimer" to="." method="_on_intro_timer_timeout"]
