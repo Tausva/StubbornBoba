@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbvxk17w5bho3"]
+
+[ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
+[ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_7a4fe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c3wq8"]
+radius = 11.0
+height = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6py18"]
+radius = 38.2099
+
+[node name="Straw" type="Node2D"]
+script = ExtResource("1_er2tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.222, 3)
+texture = ExtResource("2_7a4fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+shape = SubResource("CapsuleShape2D_c3wq8")
+debug_color = Color(0, 0.645452, 0.259766, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6py18")
+debug_color = Color(0.987896, 0, 0.308028, 0.42)
