@@ -2,8 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/bubble.tscn" id="1_v8xvu"]
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="2_vlxw4"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_pa55d"]
+[ext_resource type="PackedScene" uid="uid://c6sx8glb5y6bg" path="res://Scenes/Cup/cup.tscn" id="3_h1dxn"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -17,5 +16,5 @@ puncture_point = NodePath("../PuncturePoint")
 [node name="PuncturePoint" type="Node2D" parent="."]
 position = Vector2(591, 51)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuncturePoint"]
-shape = SubResource("CircleShape2D_pa55d")
+[node name="Cup" parent="." instance=ExtResource("3_h1dxn")]
+position = Vector2(441, 644)
