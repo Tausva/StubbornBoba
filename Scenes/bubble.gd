@@ -1,9 +1,9 @@
-extends Node2D
+extends CharacterBody2D
 
 @onready var dash_particles = $CPUParticles2D
 
-@export var speed:int = 500
-@export var dash_speed: int = 1000
+@export var speed:int = 50000
+@export var dash_speed: int = 100000
 @export var dash_duration: float = 0.2
 @export var dash_cooldown: float = 5.0
 
@@ -25,7 +25,9 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("bubble_left", "bubble_right", "bubble_up", "bubble_down")
 	if direction != Vector2.ZERO:
-		position += direction.normalized() * speed * delta
+		velocity = direction.normalized() * speed * delta
+	else:
+		velocity = Vector2.ZERO
 
 	if cooldown_timer > 0:
 		cooldown_timer -= delta
@@ -39,10 +41,11 @@ func _physics_process(delta: float) -> void:
 			cooldown_timer = dash_cooldown
 			dash_particles.emitting = false
 		else:
-			position += dash_direction * dash_speed * delta
+			velocity += dash_direction * dash_speed * delta
 
 	if Input.is_action_just_pressed("bubble_dash") and cooldown_timer <= 0 and direction != Vector2.ZERO:
 		_start_dash(direction)
+	move_and_slide()
 
 
 func _start_dash(direction: Vector2) -> void:
@@ -52,4 +55,3 @@ func _start_dash(direction: Vector2) -> void:
 	dash_particles.emitting = true
 	dash_particles.rotation_degrees = dash_direction.angle() * 180 / PI + 180
 	dash_particles.local_coords = false
-	
