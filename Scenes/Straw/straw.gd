@@ -11,6 +11,7 @@ signal sucked
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var suck_cooldown_timer: Timer = $SuckCooldownTimer
 @onready var suck_duration_timer: Timer = $SuckDurationTimer
+@onready var cpu_particles: CPUParticles2D = $CPUParticles2D
 
 var sprite_half_height: float
 var can_suck: bool = true
@@ -40,12 +41,14 @@ func _physics_process(delta: float) -> void:
 	
 	if can_suck and Input.get_action_strength("straw_suck"):
 		sucking = true
+		cpu_particles.emitting = true
 		_suck()
 	elif can_suck and sucking:
 		suck_duration_timer.stop()
 		suck_cooldown_timer.start(suck_timeout_duration)
 		can_suck = false
 		sucking = false
+		cpu_particles.emitting = false
 
 
 func _suck() -> void:
@@ -54,6 +57,10 @@ func _suck() -> void:
 	
 	if cup:
 		cup.drain(drain_amuont)
+
+
+func _emit_sucking_particles() -> void:
+	pass
 
 
 func _on_sucking_area_area_entered(area: Area2D) -> void:
@@ -72,6 +79,7 @@ func _on_suck_cooldown_timeout() -> void:
 
 func _on_suck_duration_timer_timeout() -> void:
 	can_suck = false
+	cpu_particles.emitting = false
 	suck_cooldown_timer.start(suck_timeout_duration)
 
 
