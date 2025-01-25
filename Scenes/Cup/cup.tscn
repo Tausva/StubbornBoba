@@ -1,32 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6sx8glb5y6bg"]
+[gd_scene load_steps=6 format=3 uid="uid://c6sx8glb5y6bg"]
 
 [ext_resource type="Script" path="res://Scenes/Cup/cup.gd" id="1_1japy"]
-[ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_mqvxm"]
+[ext_resource type="Texture2D" uid="uid://cl4s762f2inkd" path="res://Scenes/Cup/Puodelio pagrindas.png" id="2_sr4ki"]
+[ext_resource type="Texture2D" uid="uid://dxq47opr4q1a2" path="res://Scenes/Cup/tea_filling_square.png" id="3_6k3l2"]
+[ext_resource type="Texture2D" uid="uid://cxjr2bp42y1lo" path="res://Scenes/Cup/Puodelio isore.png" id="4_xukgq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
-size = Vector2(360, 600)
+size = Vector2(734.559, 900)
 
 [node name="Cup" type="StaticBody2D" groups=["border"]]
 scale = Vector2(0.993794, 0.976781)
 script = ExtResource("1_1japy")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
+position = Vector2(72.4496, -152.542)
 scale = Vector2(1, 1.00427)
-polygon = PackedVector2Array(30, 0, 0, -600, 360, -600, 330, 0, 30, 0, 10, 20, 350, 20, 380, -620, -20, -620, 10, 20)
+polygon = PackedVector2Array(-50.3122, 149.854, -168.043, -798.202, 520.228, -798.202, 441.741, 140.679, -50.3122, 149.854, -69.4309, 170.242, 460.86, 160.048, 542.366, -827.765, -190.18, -821.648, -69.4309, 170.242)
 
 [node name="Tea" type="Area2D" parent="." groups=["tea"]]
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Tea"]
-position = Vector2(180, -300)
+position = Vector2(250.555, -451.483)
 shape = SubResource("RectangleShape2D_mcdyu")
 
 [node name="CupShapeSprite" type="Sprite2D" parent="Tea"]
 clip_children = 1
-position = Vector2(180, -300)
-scale = Vector2(3, 5)
-texture = ExtResource("2_mqvxm")
+position = Vector2(246.53, -527.242)
+texture = ExtResource("2_sr4ki")
 
 [node name="TeaSprite" type="Sprite2D" parent="Tea/CupShapeSprite"]
 modulate = Color(0.546657, 0.321078, 0, 0.364706)
+position = Vector2(20.1249, 78.8304)
 scale = Vector2(2, 1)
-texture = ExtResource("2_mqvxm")
+texture = ExtResource("3_6k3l2")
+
+[node name="Outline" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(248.542, -525.195)
+texture = ExtResource("4_xukgq")

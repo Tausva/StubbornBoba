@@ -10,12 +10,14 @@ var fill_percentage: float = 1.0
 var original_tea_height: float
 var original_tea_position: Vector2
 var original_tea_sprite_scale: float
+var original_tea_sprite_position: float
 
 
 func _ready() -> void:
 	original_tea_height = (tea_collision_shape.shape as RectangleShape2D).size.y
 	original_tea_position = tea_collision_shape.position
 	original_tea_sprite_scale = tea_sprite.scale.y
+	original_tea_sprite_position = tea_sprite.position.y
 
 
 func drain(percentage: float) -> void:
@@ -34,4 +36,4 @@ func _update_play_area() -> void:
 	
 	var position_to_go = cup_shape_sprite.position.y / cup_shape_sprite.scale.y * -1
 	tea_sprite.scale.y = original_tea_sprite_scale * fill_percentage
-	tea_sprite.position.y = position_to_go - position_to_go * fill_percentage
+	tea_sprite.position.y = 530 * (1 - fill_percentage) + original_tea_sprite_position * fill_percentage

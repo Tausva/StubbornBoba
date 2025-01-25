@@ -7,6 +7,7 @@ signal sucked
 @export var suck_timeout_duration: float = 2
 @export var suck_duration: float = .2
 @export var drain_amuont: float = .01
+@export var sucking_speed_modifier: float = .7
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var suck_cooldown_timer: Timer = $SuckCooldownTimer
@@ -26,6 +27,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("straw_left", "straw_right", "straw_up", "straw_down")
 	direction = (direction as Vector2).normalized()
+	
+	if sucking and can_suck:
+		direction *= sucking_speed_modifier
+	
 	if direction:
 		velocity = speed * direction * delta
 	else:

@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://40bew4mxblvf"]
+
+[ext_resource type="Texture2D" uid="uid://bmjl7jhlwrym6" path="res://Scenes/GameScene/Background.png" id="1_ianr0"]
+[ext_resource type="Script" path="res://Scenes/GameScene/game_scene.gd" id="1_wrqjr"]
+[ext_resource type="Texture2D" uid="uid://bvtueqr7wbnd3" path="res://Scenes/GameScene/dash text.png" id="2_dxfrl"]
+[ext_resource type="Texture2D" uid="uid://yh3l03qrwjtj" path="res://Scenes/GameScene/Move arrows text.png" id="3_c2v5y"]
+[ext_resource type="Texture2D" uid="uid://bigc01xnvl04x" path="res://Scenes/GameScene/suck text.png" id="4_14gqq"]
+[ext_resource type="PackedScene" uid="uid://c6sx8glb5y6bg" path="res://Scenes/Cup/cup.tscn" id="5_v2f7m"]
+[ext_resource type="Texture2D" uid="uid://bma2tu3gpokix" path="res://Scenes/GameScene/Burbuliuke.png" id="6_3gmor"]
+[ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_wrqjr")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_ianr0")
+centered = false
+
+[node name="Playground" type="Node" parent="."]
+
+[node name="ControlsUI" type="Node" parent="Playground"]
+
+[node name="DashMovementSprite" type="Sprite2D" parent="Playground/ControlsUI"]
+position = Vector2(1785, 874)
+texture = ExtResource("2_dxfrl")
+
+[node name="MoveSprite" type="Sprite2D" parent="Playground/ControlsUI"]
+position = Vector2(1623, 753)
+texture = ExtResource("3_c2v5y")
+
+[node name="SuckSprite" type="Sprite2D" parent="Playground/ControlsUI"]
+position = Vector2(1838, 637)
+texture = ExtResource("4_14gqq")
+
+[node name="Cup" parent="Playground" instance=ExtResource("5_v2f7m")]
+position = Vector2(728, 1057)
+
+[node name="Straw" parent="Playground" node_paths=PackedStringArray("puncture_point") instance=ExtResource("7_2x8q1")]
+position = Vector2(909, 478)
+puncture_point = NodePath("../PuncturePoint")
+
+[node name="PuncturePoint" type="Node2D" parent="Playground"]
+position = Vector2(977, 55)
+
+[node name="Foreground" type="Node" parent="."]
+
+[node name="PPG_Bubble" type="Sprite2D" parent="Foreground"]
+z_index = 11
+position = Vector2(334, 500)
+texture = ExtResource("6_3gmor")
