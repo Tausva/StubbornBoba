@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://do64xy57h3bfk"]
+[gd_scene load_steps=6 format=3 uid="uid://btfdwix3jyaec"]
 
-[ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="1_8h56p"]
+[ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="1_0x3hu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3six"]
 size = Vector2(1164, 29)
@@ -10,14 +10,14 @@ radius = 27.0
 height = 1062.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lnrs"]
-size = Vector2(1107, 187)
+size = Vector2(1107, 42.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xekxu"]
 size = Vector2(1113, 48)
 
 [node name="GameScene" type="Node2D"]
 
-[node name="Bubble" parent="." node_paths=PackedStringArray("collision_shape_water") instance=ExtResource("1_8h56p")]
+[node name="Bubble" parent="." node_paths=PackedStringArray("collision_shape_water") instance=ExtResource("1_0x3hu")]
 position = Vector2(690, 461)
 collision_shape_water = NodePath("../Borders/CollisionShape2D")
 
@@ -40,14 +40,14 @@ position = Vector2(1167, 220)
 shape = SubResource("CapsuleShape2D_7y6dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
-position = Vector2(577, 99)
+position = Vector2(583, 320.25)
 shape = SubResource("RectangleShape2D_3lnrs")
 debug_color = Color(0.940823, 0.231442, 0.202422, 0.42)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(232, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["water_filter"]]
 position = Vector2(350, 127)
 shape = SubResource("RectangleShape2D_xekxu")
 

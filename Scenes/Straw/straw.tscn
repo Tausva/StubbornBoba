@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbvxk17w5bho3"]
+[gd_scene load_steps=6 format=3 uid="uid://dbvxk17w5bho3"]
 
 [ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
 [ext_resource type="Texture2D" uid="uid://dhkrrcremqb4t" path="res://Scenes/Straw/straw.png" id="2_dlx1f"]
-[ext_resource type="Texture2D" uid="uid://vm8qiyefv0nw" path="res://Scenes/Straw/Line.png" id="3_it7c4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htlp6"]
 
@@ -10,7 +9,7 @@
 radius = 26.93
 
 [sub_resource type="Gradient" id="Gradient_0nq4a"]
-colors = PackedColorArray(1, 0.693045, 0.359619, 1, 1, 0.611765, 0, 0)
+colors = PackedColorArray(0.988235, 0.866667, 0.792157, 1, 0.988235, 0.866667, 0.792157, 0)
 
 [node name="Straw" type="CharacterBody2D"]
 script = ExtResource("1_er2tw")
@@ -36,14 +35,20 @@ one_shot = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 scale = Vector2(1.00758, 1.02092)
-amount = 64
-texture = ExtResource("3_it7c4")
+emitting = false
+amount = 128
+speed_scale = 3.0
+lifetime_randomness = 0.5
 emission_shape = 1
 emission_sphere_radius = 100.0
 direction = Vector2(0, 1)
 gravity = Vector2(0, 0)
+angular_velocity_max = 100.0
 radial_accel_min = -50.0
 radial_accel_max = -30.0
+angle_max = 360.0
+scale_amount_min = 3.0
+scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_0nq4a")
 
 [connection signal="area_entered" from="SuckingArea" to="." method="_on_sucking_area_area_entered"]

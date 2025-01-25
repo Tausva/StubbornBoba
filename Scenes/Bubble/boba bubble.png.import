@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vm8qiyefv0nw"
-path="res://.godot/imported/Line.png-6aef68522b8fc47729cafd6ec53b898e.ctex"
+uid="uid://drfkcbmjuvecc"
+path="res://.godot/imported/boba bubble.png-e6da8aa4967a054788b6a48c0267c337.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Straw/Line.png"
-dest_files=["res://.godot/imported/Line.png-6aef68522b8fc47729cafd6ec53b898e.ctex"]
+source_file="res://Scenes/Bubble/boba bubble.png"
+dest_files=["res://.godot/imported/boba bubble.png-e6da8aa4967a054788b6a48c0267c337.ctex"]
 
 [params]
 

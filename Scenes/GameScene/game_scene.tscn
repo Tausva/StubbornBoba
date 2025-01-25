@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://40bew4mxblvf"]
+[gd_scene load_steps=10 format=3 uid="uid://40bew4mxblvf"]
 
 [ext_resource type="Texture2D" uid="uid://bmjl7jhlwrym6" path="res://Scenes/GameScene/Background.png" id="1_ianr0"]
 [ext_resource type="Script" path="res://Scenes/GameScene/game_scene.gd" id="1_wrqjr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c6sx8glb5y6bg" path="res://Scenes/Cup/cup.tscn" id="5_v2f7m"]
 [ext_resource type="Texture2D" uid="uid://bma2tu3gpokix" path="res://Scenes/GameScene/Burbuliuke.png" id="6_3gmor"]
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
+[ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_wrqjr")
@@ -41,6 +42,9 @@ puncture_point = NodePath("../PuncturePoint")
 
 [node name="PuncturePoint" type="Node2D" parent="Playground"]
 position = Vector2(977, 55)
+
+[node name="Bubble" parent="Playground" instance=ExtResource("8_r4hmp")]
+position = Vector2(1118, 968)
 
 [node name="Foreground" type="Node" parent="."]
 

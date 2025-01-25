@@ -13,41 +13,29 @@ var is_dashing: bool = false
 var dash_direction: Vector2 = Vector2.ZERO
 var dash_timer: float = 0.0 
 var dash_cooldown_timer: float = 0.0
+
 var jump_cooldown_timer: float = 0.0
 var can_jump: bool = false
-var disable_vertical_movement: bool = false
 var jump_activated = false
 var is_above_water = false
-var collision_shape_water_count: int = 0
+
 
 func _ready() -> void:
 	dash_particles.emitting = false
 	dash_particles.texture =$Sprite2D.texture
-	pass 
-
-
-func _process(delta: float) -> void:
-	pass
 
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("bubble_left", "bubble_right", "bubble_up", "bubble_down")
 	
+	if jump_activated:
+		direction.y = 0 #reiks atnulinti
+	
 	if direction != Vector2.ZERO:
 		velocity = direction.normalized() * speed * delta
 	else:
 		velocity = Vector2.ZERO
-
-	#if disable_vertical_movement and direction.y > 0:
-		#velocity = Vector2.ZERO
-
-	if disable_vertical_movement and direction.y < 0:
-		velocity.y += -1000
-		disable_vertical_movement = true
-
-	if is_above_water and jump_activated:
-		velocity.y += speed * delta
-
+	
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
 		if dash_cooldown_timer < 0:
@@ -61,18 +49,18 @@ func _physics_process(delta: float) -> void:
 			dash_particles.emitting = false
 		else:
 			velocity += dash_direction * dash_speed * delta
-
+	
 	if jump_cooldown_timer > 0:
 		jump_cooldown_timer -= delta
 		if jump_cooldown_timer < 0:
 			jump_cooldown_timer = 0
-
+	
 	if jump_cooldown_timer <= 0:
 		can_jump = true
-		#call_deferred("collision_shape_water_enabled")
 
 	if Input.is_action_just_pressed("bubble_dash") and dash_cooldown_timer <= 0 and direction != Vector2.ZERO:
 		_start_dash(direction)
+	
 	move_and_slide()
 
 
@@ -90,8 +78,11 @@ func _start_dash(direction: Vector2) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	disable_vertical_movement = true
-
+	if !area.is_in_group("water_filter"):
+		pass
+	
+	collision_shape_water.disabled = true
+	jump_activated = true
 	if can_jump:
 		print("ar tu ateini")
 		call_deferred("collision_shape_water_disabled")
@@ -109,11 +100,11 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	collision_shape_water_count += 1
-	print(collision_shape_water_count)
-	if collision_shape_water_count == 2 :
-		call_deferred("collision_shape_water_enabled")
-		collision_shape_water_count == 0
+	#collision_shape_water_count += 1
+	#print(collision_shape_water_count)
+	#if collision_shape_water_count == 2 :
+	#	call_deferred("collision_shape_water_enabled")
+	#	collision_shape_water_count == 0
 	pass # Replace with function body.
 
 

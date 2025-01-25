@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdeu8e0xtce2r"]
 
-[ext_resource type="Script" path="res://Scenes/bubble.gd" id="1_1jhyk"]
-[ext_resource type="Texture2D" uid="uid://bnfwqxxu0bkpj" path="res://icon.svg" id="2_rw652"]
+[ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_1jhyk"]
+[ext_resource type="Texture2D" uid="uid://drfkcbmjuvecc" path="res://Scenes/Bubble/boba bubble.png" id="2_mkwq5"]
 
 [sub_resource type="Gradient" id="Gradient_iycsv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a25ld"]
-radius = 79.7621
+radius = 46.0109
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8hhyj"]
-radius = 80.06
+radius = 46.0977
 
 [node name="Bubble" type="CharacterBody2D"]
 script = ExtResource("1_1jhyk")
@@ -31,7 +31,7 @@ damping_max = 0.5
 color_ramp = SubResource("Gradient_iycsv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_rw652")
+texture = ExtResource("2_mkwq5")
 
 [node name="Area2D" type="Area2D" parent="."]
 
