@@ -14,6 +14,7 @@ var cooldown_timer: float = 0.0
 
 func _ready() -> void:
 	dash_particles.emitting = false
+	dash_particles.texture =$Sprite2D.texture
 	pass 
 
 
