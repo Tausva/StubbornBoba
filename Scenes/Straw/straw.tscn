@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbvxk17w5bho3"]
+
+[ext_resource type="Script" path="res://Scenes/Straw/straw.gd" id="1_er2tw"]
+
+[node name="Straw" type="Node"]
+script = ExtResource("1_er2tw")
