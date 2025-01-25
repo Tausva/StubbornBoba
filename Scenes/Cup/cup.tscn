@@ -15,13 +15,17 @@ polygon = PackedVector2Array(30, 0, 0, -600, 360, -600, 330, 0)
 
 [node name="Tea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tea"]
+[node name="CollisionShape" type="CollisionShape2D" parent="Tea"]
 position = Vector2(180, -300)
 shape = SubResource("RectangleShape2D_mcdyu")
 
-[node name="TextureRect" type="TextureRect" parent="Tea"]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(8.92921, -14.9708)
+[node name="CupShapeSprite" type="Sprite2D" parent="Tea"]
+clip_children = 1
+position = Vector2(180, -300)
+scale = Vector2(3, 5)
 texture = ExtResource("2_mqvxm")
-stretch_mode = 1
+
+[node name="TeaSprite" type="Sprite2D" parent="Tea/CupShapeSprite"]
+modulate = Color(0.546657, 0.321078, 0, 0.364706)
+scale = Vector2(2, 1)
+texture = ExtResource("2_mqvxm")
