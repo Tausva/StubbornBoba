@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8huiym2e8r4c"
-path="res://.godot/imported/Straw wins.png-b5b40c706f760f1bc3b33d14c5d89bb6.ctex"
+uid="uid://cujvaje01lchj"
+path="res://.godot/imported/Go_back_button_clicked.png-f6521fb580a1b76951d17f9fe3191a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Winners/Straw wins.png"
-dest_files=["res://.godot/imported/Straw wins.png-b5b40c706f760f1bc3b33d14c5d89bb6.ctex"]
+source_file="res://Scenes/WinScreen/Go_back_button_clicked.png"
+dest_files=["res://.godot/imported/Go_back_button_clicked.png-f6521fb580a1b76951d17f9fe3191a4b.ctex"]
 
 [params]
 

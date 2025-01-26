@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c88rhpypt7txq"
-path="res://.godot/imported/Bubble wins.png-33b1d12f76462cbf8d3806804e741975.ctex"
+uid="uid://ba4eyrenhknhl"
+path="res://.godot/imported/quit_blue.png-151f595e9abeab5f7adeff54dd761f7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Winners/Bubble wins.png"
-dest_files=["res://.godot/imported/Bubble wins.png-33b1d12f76462cbf8d3806804e741975.ctex"]
+source_file="res://Scenes/MainMenu/quit_blue.png"
+dest_files=["res://.godot/imported/quit_blue.png-151f595e9abeab5f7adeff54dd761f7c.ctex"]
 
 [params]
 

@@ -128,7 +128,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"suck",
-"speed": 25.0
+"speed": 30.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htlp6"]
@@ -148,6 +148,7 @@ speed = 20000
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -554)
 sprite_frames = SubResource("SpriteFrames_h5j15")
+animation = &"suck"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_htlp6")
