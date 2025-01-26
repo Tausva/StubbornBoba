@@ -574,8 +574,6 @@ process_mode = 3
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_cygo5")
 autoplay = "default"
-frame = 75
-frame_progress = 1.0
 
 [node name="Outline" type="Sprite2D" parent="."]
 z_index = 10

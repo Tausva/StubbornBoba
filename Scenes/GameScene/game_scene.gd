@@ -13,7 +13,9 @@ func _ready() -> void:
 	
 	get_tree().paused = true
 	intro_timer.start(start_duration)
-
+	$AudioStreamPlayer2DBubblePop.play()
+	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2DMusic.play()
 
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
