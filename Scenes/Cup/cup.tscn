@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://c6sx8glb5y6bg"]
+[gd_scene load_steps=147 format=3 uid="uid://c6sx8glb5y6bg"]
 
 [ext_resource type="Script" path="res://Scenes/Cup/cup.gd" id="1_1japy"]
 [ext_resource type="Texture2D" uid="uid://cl4s762f2inkd" path="res://Scenes/Cup/Puodelio pagrindas.png" id="2_sr4ki"]
@@ -129,6 +129,17 @@
 [ext_resource type="Texture2D" uid="uid://c5wp83xgplu55" path="res://Scenes/Cup/bubbles go poof seq/bubblespoof_00167.png" id="126_1e3kj"]
 [ext_resource type="Texture2D" uid="uid://ulbps67k7oeq" path="res://Scenes/Cup/bubbles go poof seq/bubblespoof_00168.png" id="127_7q2d1"]
 [ext_resource type="Texture2D" uid="uid://cngphp0eqnex8" path="res://Scenes/Cup/bubbles go poof seq/bubblespoof_00169.png" id="128_ytrib"]
+[ext_resource type="Texture2D" uid="uid://qjgikv4xpwyt" path="res://Scenes/Cup/splash seq/splash_00000.png" id="129_6m66o"]
+[ext_resource type="Texture2D" uid="uid://daqvsf7c1sbeb" path="res://Scenes/Cup/splash seq/splash_00001.png" id="130_dxe8c"]
+[ext_resource type="Texture2D" uid="uid://dbo88nef17kwt" path="res://Scenes/Cup/splash seq/splash_00002.png" id="131_5e5f5"]
+[ext_resource type="Texture2D" uid="uid://dwikm3h0wr4yc" path="res://Scenes/Cup/splash seq/splash_00003.png" id="132_l8jof"]
+[ext_resource type="Texture2D" uid="uid://kl555f6xciic" path="res://Scenes/Cup/splash seq/splash_00004.png" id="133_31dgv"]
+[ext_resource type="Texture2D" uid="uid://d38oxykoi8dg2" path="res://Scenes/Cup/splash seq/splash_00005.png" id="134_8ginr"]
+[ext_resource type="Texture2D" uid="uid://d30y3c5ug7tgu" path="res://Scenes/Cup/splash seq/splash_00006.png" id="135_f6jqy"]
+[ext_resource type="Texture2D" uid="uid://di82jigk5ksqg" path="res://Scenes/Cup/splash seq/splash_00007.png" id="136_enx1i"]
+[ext_resource type="Texture2D" uid="uid://c4eimjv6gv22g" path="res://Scenes/Cup/splash seq/splash_00008.png" id="137_2n5g8"]
+[ext_resource type="Texture2D" uid="uid://gafyq00kw5ra" path="res://Scenes/Cup/splash seq/splash_00009.png" id="138_oxgfc"]
+[ext_resource type="Texture2D" uid="uid://ctkeo5n3h77sm" path="res://Scenes/Cup/splash seq/splash_00010.png" id="139_2u6vc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
 size = Vector2(734.559, 900)
@@ -527,6 +538,47 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdmbv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("129_6m66o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_dxe8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_5e5f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_l8jof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_31dgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_8ginr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_f6jqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_enx1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_2n5g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_oxgfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_2u6vc")
+}],
+"loop": true,
+"name": &"Splash",
+"speed": 30.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcj8r"]
 size = Vector2(778.833, 42.7602)
 
@@ -574,6 +626,10 @@ process_mode = 3
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_cygo5")
 autoplay = "default"
+
+[node name="WaterSplash" type="AnimatedSprite2D" parent="Tea/CupShapeSprite"]
+sprite_frames = SubResource("SpriteFrames_wdmbv")
+animation = &"Splash"
 
 [node name="Outline" type="Sprite2D" parent="."]
 z_index = 10
