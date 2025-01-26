@@ -17,6 +17,15 @@ func _ready() -> void:
 	
 	pause_screen.visible = false
 
+	$AudioStreamPlayer2DBubblePop.play()
+	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2DMusic.play()
+
+
+func _process(_delta: float) -> void:
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
+
 
 func _disconnect() -> void:
 	cup.empty.disconnect(_on_bubble_victory)

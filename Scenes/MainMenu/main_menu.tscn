@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtk4n653333f7" path="res://Scenes/MainMenu/quit clicked.png" id="4_8cuit"]
 [ext_resource type="Texture2D" uid="uid://tklumxxl3hcq" path="res://Scenes/MainMenu/start_blue.png" id="4_g0kpg"]
 [ext_resource type="Texture2D" uid="uid://dx04fsjda2cc8" path="res://Scenes/MainMenu/start unclicked.png" id="6_ggafa"]
+[ext_resource type="AudioStream" uid="uid://br0o48iwlvflr" path="res://Music/Main180.mp3" id="7_ljlyx"]
 [ext_resource type="Texture2D" uid="uid://ba4eyrenhknhl" path="res://Scenes/MainMenu/quit_blue.png" id="7_mxpyh"]
 
 [node name="MainMenu" type="Node2D"]
@@ -36,6 +37,9 @@ offset_bottom = 310.0
 texture_normal = ExtResource("3_qyb3m")
 texture_pressed = ExtResource("7_mxpyh")
 texture_hover = ExtResource("4_8cuit")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ljlyx")
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

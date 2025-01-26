@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjbmjleoeo71u"
+path="res://.godot/imported/Voice 250126_101747.mp3-03a9c71c5e0bb4c39285eaf0b3760872.mp3str"
+
+[deps]
+
+source_file="res://Audio/Voice 250126_101747.mp3"
+dest_files=["res://.godot/imported/Voice 250126_101747.mp3-03a9c71c5e0bb4c39285eaf0b3760872.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

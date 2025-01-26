@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://40bew4mxblvf"]
+[gd_scene load_steps=14 format=3 uid="uid://40bew4mxblvf"]
 
 [ext_resource type="Texture2D" uid="uid://bmjl7jhlwrym6" path="res://Scenes/GameScene/Background.png" id="1_ianr0"]
 [ext_resource type="Script" path="res://Scenes/GameScene/game_scene.gd" id="1_wrqjr"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
 [ext_resource type="PackedScene" uid="uid://cik6nh0k3vldv" path="res://Scenes/PauseScreen/pause_screen.tscn" id="10_ebug7"]
+[ext_resource type="AudioStream" uid="uid://cr3w6dkhf4tlr" path="res://Audio/261473__ivolipa__street_ambience_day_2.wav" id="10_deeqg"]
+[ext_resource type="AudioStream" uid="uid://br0o48iwlvflr" path="res://Music/Main180.mp3" id="11_njiyi"]
+[ext_resource type="AudioStream" uid="uid://bjbmjleoeo71u" path="res://Audio/Voice 250126_101747.mp3" id="12_1wk0l"]
 
 [node name="GameScene" type="Node2D"]
 process_mode = 3
@@ -64,5 +67,16 @@ one_shot = true
 [node name="PauseScreen" parent="." instance=ExtResource("10_ebug7")]
 visible = false
 z_index = 12
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_deeqg")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer2DMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_njiyi")
+
+[node name="AudioStreamPlayer2DBubblePop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_1wk0l")
+volume_db = 12.0
 
 [connection signal="timeout" from="IntroTimer" to="." method="_on_intro_timer_timeout"]
