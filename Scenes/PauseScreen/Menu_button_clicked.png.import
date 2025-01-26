@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkya56m4tixpl"
-path="res://.godot/imported/Pause screen.png-c5a8ce3bdb0614f259df6970ae4313db.ctex"
+uid="uid://cb7xfd52856qg"
+path="res://.godot/imported/Menu_button_clicked.png-06b5b6a3d3ddc7da5c7d6a68af501613.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Pause/Pause screen.png"
-dest_files=["res://.godot/imported/Pause screen.png-c5a8ce3bdb0614f259df6970ae4313db.ctex"]
+source_file="res://Scenes/PauseScreen/Menu_button_clicked.png"
+dest_files=["res://.godot/imported/Menu_button_clicked.png-06b5b6a3d3ddc7da5c7d6a68af501613.ctex"]
 
 [params]
 

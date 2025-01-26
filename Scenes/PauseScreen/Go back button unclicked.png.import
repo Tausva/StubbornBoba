@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf2w7iim1xwgb"
-path="res://.godot/imported/Go back button unclicked.png-d503521c634e45a8438a62e2f4850ad1.ctex"
+path="res://.godot/imported/Go back button unclicked.png-e6177fef8f3cff7e39a625648c582bcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Pause/Go back button unclicked.png"
-dest_files=["res://.godot/imported/Go back button unclicked.png-d503521c634e45a8438a62e2f4850ad1.ctex"]
+source_file="res://Scenes/PauseScreen/Go back button unclicked.png"
+dest_files=["res://.godot/imported/Go back button unclicked.png-e6177fef8f3cff7e39a625648c582bcf.ctex"]
 
 [params]
 

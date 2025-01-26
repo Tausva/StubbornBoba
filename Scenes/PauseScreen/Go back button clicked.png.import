@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1im66pj7itc8"
-path="res://.godot/imported/Go back button clicked.png-9cef98da41ee470ed862d40fd4063852.ctex"
+path="res://.godot/imported/Go back button clicked.png-4058b939dbffc5d77789d93af68a5224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Pause/Go back button clicked.png"
-dest_files=["res://.godot/imported/Go back button clicked.png-9cef98da41ee470ed862d40fd4063852.ctex"]
+source_file="res://Scenes/PauseScreen/Go back button clicked.png"
+dest_files=["res://.godot/imported/Go back button clicked.png-4058b939dbffc5d77789d93af68a5224.ctex"]
 
 [params]
 
