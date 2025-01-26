@@ -3,6 +3,7 @@ class_name GameScene extends Node2D
 @onready var cup: Cup = $Playground/Cup
 @onready var straw: Straw = $Playground/Straw
 @onready var intro_timer: Timer = $IntroTimer
+@onready var pause_screen: PauseScreen = $PauseScreen
 
 @export var start_duration: float = 2.5
 
@@ -13,9 +14,13 @@ func _ready() -> void:
 	
 	get_tree().paused = true
 	intro_timer.start(start_duration)
+	
+	pause_screen.visible = false
+
 	$AudioStreamPlayer2DBubblePop.play()
 	$AudioStreamPlayer2D.play()
 	$AudioStreamPlayer2DMusic.play()
+
 
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
