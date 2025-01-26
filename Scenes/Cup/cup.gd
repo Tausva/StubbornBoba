@@ -10,7 +10,8 @@ signal threasholf_reached
 @onready var boba_no_go_zone: StaticBody2D = $BobaNoGoZone
 @onready var surface_waves: AnimatedSprite2D = $Tea/CupShapeSprite/SurfaceWaves
 
-@export var jump_threashold: float = .85 
+@export var jump_threashold: float = .85
+@export var suck_threashold: float = .1
 
 var fill_percentage: float = 1.0
 var original_tea_height: float
@@ -32,10 +33,13 @@ func _ready() -> void:
 	original_surface_waves_position = surface_waves.position.y
 
 
+func _process(delta: float) -> void:
+	print(fill_percentage)
+
 func drain(percentage: float) -> void:
 	fill_percentage -= percentage
 	$SlurpAudio.play()
-	if fill_percentage < 0:
+	if fill_percentage <= suck_threashold:
 		fill_percentage = 0
 		empty.emit()
 	

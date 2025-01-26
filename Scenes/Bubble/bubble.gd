@@ -75,8 +75,9 @@ func _physics_process(delta: float) -> void:
 
 
 func enable_jumping() -> void:
-	jump_enabled = true
-	jump_cooldown_started.emit(.1)
+	if !jump_enabled:
+		jump_enabled = true
+		jump_cooldown_started.emit(.1)
 
 
 func die() -> void:
