@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://40bew4mxblvf"]
+[gd_scene load_steps=15 format=3 uid="uid://40bew4mxblvf"]
 
 [ext_resource type="Texture2D" uid="uid://bmjl7jhlwrym6" path="res://Scenes/GameScene/Background.png" id="1_ianr0"]
 [ext_resource type="Script" path="res://Scenes/GameScene/game_scene.gd" id="1_wrqjr"]
-[ext_resource type="Texture2D" uid="uid://bvtueqr7wbnd3" path="res://Scenes/GameScene/dash text.png" id="2_dxfrl"]
-[ext_resource type="Texture2D" uid="uid://yh3l03qrwjtj" path="res://Scenes/GameScene/Move arrows text.png" id="3_c2v5y"]
-[ext_resource type="Texture2D" uid="uid://bigc01xnvl04x" path="res://Scenes/GameScene/suck text.png" id="4_14gqq"]
+[ext_resource type="Texture2D" uid="uid://bvtueqr7wbnd3" path="res://Scenes/Abilities/dash text.png" id="2_dxfrl"]
+[ext_resource type="Texture2D" uid="uid://yh3l03qrwjtj" path="res://Scenes/Abilities/Move arrows text.png" id="3_c2v5y"]
+[ext_resource type="PackedScene" uid="uid://djul7yxp62ykw" path="res://Scenes/Abilities/ability.tscn" id="3_hjmwm"]
+[ext_resource type="Texture2D" uid="uid://bigc01xnvl04x" path="res://Scenes/Abilities/suck text.png" id="4_14gqq"]
+[ext_resource type="PackedScene" uid="uid://byvyfvvdxr0dr" path="res://Scenes/Abilities/big_ability.tscn" id="5_j28mp"]
 [ext_resource type="PackedScene" uid="uid://c6sx8glb5y6bg" path="res://Scenes/Cup/cup.tscn" id="5_v2f7m"]
 [ext_resource type="Texture2D" uid="uid://bma2tu3gpokix" path="res://Scenes/GameScene/Burbuliuke.png" id="6_3gmor"]
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
-[ext_resource type="AudioStream" uid="uid://cr3w6dkhf4tlr" path="res://Audio/261473__ivolipa__street_ambience_day_2.wav" id="10_deeqg"]
 [ext_resource type="PackedScene" uid="uid://cik6nh0k3vldv" path="res://Scenes/PauseScreen/pause_screen.tscn" id="10_ebug7"]
 [ext_resource type="AudioStream" uid="uid://br0o48iwlvflr" path="res://Music/Main180.mp3" id="11_njiyi"]
 [ext_resource type="AudioStream" uid="uid://bjbmjleoeo71u" path="res://Audio/Voice 250126_101747.mp3" id="12_1wk0l"]
@@ -28,17 +29,17 @@ process_mode = 1
 
 [node name="ControlsUI" type="Node" parent="Playground"]
 
-[node name="DashMovementSprite" type="Sprite2D" parent="Playground/ControlsUI"]
+[node name="DashAbility" parent="Playground/ControlsUI" instance=ExtResource("3_hjmwm")]
 position = Vector2(1785, 874)
-texture = ExtResource("2_dxfrl")
+ability_texture = ExtResource("2_dxfrl")
 
-[node name="MoveSprite" type="Sprite2D" parent="Playground/ControlsUI"]
-position = Vector2(1623, 753)
-texture = ExtResource("3_c2v5y")
+[node name="MoveAbility" parent="Playground/ControlsUI" instance=ExtResource("5_j28mp")]
+position = Vector2(1630, 746)
+ability_texture = ExtResource("3_c2v5y")
 
-[node name="SuckSprite" type="Sprite2D" parent="Playground/ControlsUI"]
-position = Vector2(1838, 637)
-texture = ExtResource("4_14gqq")
+[node name="SuckAbility" parent="Playground/ControlsUI" instance=ExtResource("3_hjmwm")]
+position = Vector2(1839, 640)
+ability_texture = ExtResource("4_14gqq")
 
 [node name="Cup" parent="Playground" instance=ExtResource("5_v2f7m")]
 position = Vector2(728, 1057)
@@ -69,7 +70,6 @@ visible = false
 z_index = 12
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_deeqg")
 volume_db = 5.0
 
 [node name="AudioStreamPlayer2DMusic" type="AudioStreamPlayer2D" parent="."]

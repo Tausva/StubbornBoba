@@ -3,7 +3,7 @@ class_name PauseScreen extends Node2D
 @export var press_delay: float = .1
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("exit"):
 		if  visible:
 			_exit_screen()

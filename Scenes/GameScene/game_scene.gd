@@ -2,8 +2,12 @@ class_name GameScene extends Node2D
 
 @onready var cup: Cup = $Playground/Cup
 @onready var straw: Straw = $Playground/Straw
+@onready var bubble: Bubble = $Playground/Bubble
 @onready var intro_timer: Timer = $IntroTimer
 @onready var pause_screen: PauseScreen = $PauseScreen
+@onready var dash_ability: Ability = $Playground/ControlsUI/DashAbility
+@onready var move_ability: Ability = $Playground/ControlsUI/MoveAbility
+@onready var suck_ability: Ability = $Playground/ControlsUI/SuckAbility
 
 @export var start_duration: float = 2.5
 
@@ -20,11 +24,10 @@ func _ready() -> void:
 	$AudioStreamPlayer2DBubblePop.play()
 	$AudioStreamPlayer2D.play()
 	$AudioStreamPlayer2DMusic.play()
-
-
-func _process(_delta: float) -> void:
-	if Input.is_key_pressed(KEY_ESCAPE):
-		get_tree().quit()
+	
+	straw.suck_cooldown_started.connect(_on_straw_suck_cooldown_started)
+	bubble.dash_cooldown_started.connect(_on_bubble_dash_cooldown_started)
+	bubble.jump_cooldown_started.connect(_on_bubble_jump_cooldown_started)
 
 
 func _disconnect() -> void:
@@ -50,3 +53,15 @@ func _on_straw_victory() -> void:
 
 func _on_intro_timer_timeout() -> void:
 	get_tree().paused = false
+
+
+func _on_straw_suck_cooldown_started(duration: float) -> void:
+	suck_ability.start_ability_timer(duration)
+
+
+func _on_bubble_dash_cooldown_started(duration: float) -> void:
+	dash_ability.start_ability_timer(duration)
+
+
+func _on_bubble_jump_cooldown_started(duration: float) -> void:
+	move_ability.start_ability_timer(duration)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bigc01xnvl04x"
-path="res://.godot/imported/suck text.png-398352bad4c13e0f023cedf19f421d9d.ctex"
+path="res://.godot/imported/suck text.png-0b126cef74851ba76b74471fc691b720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/GameScene/suck text.png"
-dest_files=["res://.godot/imported/suck text.png-398352bad4c13e0f023cedf19f421d9d.ctex"]
+source_file="res://Scenes/Abilities/suck text.png"
+dest_files=["res://.godot/imported/suck text.png-0b126cef74851ba76b74471fc691b720.ctex"]
 
 [params]
 

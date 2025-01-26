@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yh3l03qrwjtj"
-path="res://.godot/imported/Move arrows text.png-1916ba0bec005b7a42a5c569b7e6346a.ctex"
+uid="uid://bvtueqr7wbnd3"
+path="res://.godot/imported/dash text.png-f3464ee5b8ea070b75ce562bbd52f0f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/GameScene/Move arrows text.png"
-dest_files=["res://.godot/imported/Move arrows text.png-1916ba0bec005b7a42a5c569b7e6346a.ctex"]
+source_file="res://Scenes/Abilities/dash text.png"
+dest_files=["res://.godot/imported/dash text.png-f3464ee5b8ea070b75ce562bbd52f0f7.ctex"]
 
 [params]
 

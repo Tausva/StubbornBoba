@@ -1,6 +1,7 @@
 class_name Straw extends CharacterBody2D
 
 signal sucked
+signal suck_cooldown_started(duration: float)
 
 @export var speed: int = 200
 @export var puncture_point: Node2D
@@ -57,6 +58,7 @@ func _physics_process(delta: float) -> void:
 	elif can_suck and sucking:
 		suck_duration_timer.stop()
 		suck_cooldown_timer.start(suck_timeout_duration)
+		suck_cooldown_started.emit(suck_timeout_duration)
 		can_suck = false
 		sucking = false
 		cpu_particles.emitting = false
@@ -104,3 +106,4 @@ func _on_suck_duration_timer_timeout() -> void:
 	can_suck = false
 	cpu_particles.emitting = false
 	suck_cooldown_timer.start(suck_timeout_duration)
+	suck_cooldown_started.emit(suck_timeout_duration)

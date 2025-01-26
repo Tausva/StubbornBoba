@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://byvyfvvdxr0dr"]
+
+[ext_resource type="Script" path="res://Scenes/Abilities/ability.gd" id="1_etsok"]
+[ext_resource type="Texture2D" uid="uid://yh3l03qrwjtj" path="res://Scenes/Abilities/Move arrows text.png" id="2_rmk2t"]
+[ext_resource type="Texture2D" uid="uid://lb5c3mep7t7l" path="res://Scenes/Straw/Line.png" id="3_f5wv7"]
+
+[node name="Ability" type="Node2D"]
+clip_children = 1
+position = Vector2(-3, 3)
+script = ExtResource("1_etsok")
+lower_position = 86.0
+
+[node name="Filter" type="Sprite2D" parent="."]
+clip_children = 1
+texture = ExtResource("2_rmk2t")
+
+[node name="Background" type="Sprite2D" parent="Filter"]
+modulate = Color(0.227451, 0.227451, 0.227451, 1)
+position = Vector2(1, 1)
+scale = Vector2(10, 200)
+texture = ExtResource("3_f5wv7")
+
+[node name="Fill" type="Sprite2D" parent="Filter"]
+modulate = Color(0.976471, 0, 0, 1)
+scale = Vector2(10, 165)
+texture = ExtResource("3_f5wv7")
+
+[node name="Filled" type="Sprite2D" parent="Filter"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(10, 170)
+texture = ExtResource("3_f5wv7")

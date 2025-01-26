@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://djul7yxp62ykw"]
+[gd_scene load_steps=4 format=3 uid="uid://djul7yxp62ykw"]
 
-[ext_resource type="Texture2D" uid="uid://bvtueqr7wbnd3" path="res://Scenes/GameScene/dash text.png" id="1_16d2j"]
+[ext_resource type="Texture2D" uid="uid://bvtueqr7wbnd3" path="res://Scenes/Abilities/dash text.png" id="1_16d2j"]
+[ext_resource type="Script" path="res://Scenes/Abilities/ability.gd" id="2_ow4f6"]
+[ext_resource type="Texture2D" uid="uid://lb5c3mep7t7l" path="res://Scenes/Straw/Line.png" id="2_sgku0"]
 
-[node name="DashMovementSprite" type="Sprite2D"]
+[node name="Ability" type="Node2D"]
+clip_children = 1
+position = Vector2(-3, 3)
+script = ExtResource("2_ow4f6")
+
+[node name="Filter" type="Sprite2D" parent="."]
+clip_children = 1
 texture = ExtResource("1_16d2j")
+
+[node name="Background" type="Sprite2D" parent="Filter"]
+modulate = Color(0.227451, 0.227451, 0.227451, 1)
+scale = Vector2(10, 200)
+texture = ExtResource("2_sgku0")
+
+[node name="Fill" type="Sprite2D" parent="Filter"]
+modulate = Color(0.976471, 0, 0, 1)
+scale = Vector2(10, 120)
+texture = ExtResource("2_sgku0")
+
+[node name="Filled" type="Sprite2D" parent="Filter"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(10, 120)
+texture = ExtResource("2_sgku0")

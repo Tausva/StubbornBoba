@@ -1,5 +1,8 @@
 class_name Bubble extends CharacterBody2D
 
+signal dash_cooldown_started(duration: float)
+signal jump_cooldown_started(duration: float)
+
 const gravity: float = 500
 
 @onready var dash_particles = $CPUParticles2D
@@ -51,6 +54,7 @@ func _physics_process(delta: float) -> void:
 		if dash_timer <= 0:
 			is_dashing = false
 			dash_cooldown_timer = dash_cooldown
+			dash_cooldown_started.emit(dash_cooldown)
 			dash_particles.emitting = false
 		else:
 			velocity += dash_direction * dash_speed * delta
@@ -104,6 +108,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		can_jump = false
 		is_above_water = false
 		jump_cooldown_timer = jump_cooldown
+		jump_cooldown_started.emit(jump_cooldown)
 
 
 func _collision_shape_water_disabled() -> void:
