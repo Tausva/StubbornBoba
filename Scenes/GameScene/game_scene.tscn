@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bma2tu3gpokix" path="res://Scenes/GameScene/Burbuliuke.png" id="6_3gmor"]
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
-[ext_resource type="PackedScene" uid="uid://cik6nh0k3vldv" path="res://Scenes/PauseScreen/pause_screen.tscn" id="10_ebug7"]
 [ext_resource type="AudioStream" uid="uid://cr3w6dkhf4tlr" path="res://Audio/261473__ivolipa__street_ambience_day_2.wav" id="10_deeqg"]
+[ext_resource type="PackedScene" uid="uid://cik6nh0k3vldv" path="res://Scenes/PauseScreen/pause_screen.tscn" id="10_ebug7"]
 [ext_resource type="AudioStream" uid="uid://br0o48iwlvflr" path="res://Music/Main180.mp3" id="11_njiyi"]
 [ext_resource type="AudioStream" uid="uid://bjbmjleoeo71u" path="res://Audio/Voice 250126_101747.mp3" id="12_1wk0l"]
 
