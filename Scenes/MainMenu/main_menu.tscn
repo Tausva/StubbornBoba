@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqavvy54sx8j7"]
+[gd_scene load_steps=10 format=3 uid="uid://cqavvy54sx8j7"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_0dm1o"]
 [ext_resource type="Texture2D" uid="uid://bymo7iyfib46k" path="res://Scenes/MainMenu/Main menu.png" id="1_a4qmr"]
@@ -40,6 +40,7 @@ texture_hover = ExtResource("4_8cuit")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_ljlyx")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

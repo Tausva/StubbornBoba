@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://40bew4mxblvf"]
+[gd_scene load_steps=81 format=3 uid="uid://40bew4mxblvf"]
 
 [ext_resource type="Texture2D" uid="uid://bmjl7jhlwrym6" path="res://Scenes/GameScene/Background.png" id="1_ianr0"]
 [ext_resource type="Script" path="res://Scenes/GameScene/game_scene.gd" id="1_wrqjr"]
@@ -6,13 +6,301 @@
 [ext_resource type="Texture2D" uid="uid://yh3l03qrwjtj" path="res://Scenes/GameScene/Move arrows text.png" id="3_c2v5y"]
 [ext_resource type="Texture2D" uid="uid://bigc01xnvl04x" path="res://Scenes/GameScene/suck text.png" id="4_14gqq"]
 [ext_resource type="PackedScene" uid="uid://c6sx8glb5y6bg" path="res://Scenes/Cup/cup.tscn" id="5_v2f7m"]
-[ext_resource type="Texture2D" uid="uid://bma2tu3gpokix" path="res://Scenes/GameScene/Burbuliuke.png" id="6_3gmor"]
 [ext_resource type="PackedScene" uid="uid://dbvxk17w5bho3" path="res://Scenes/Straw/straw.tscn" id="7_2x8q1"]
 [ext_resource type="PackedScene" uid="uid://cdeu8e0xtce2r" path="res://Scenes/Bubble/bubble.tscn" id="8_r4hmp"]
-[ext_resource type="AudioStream" uid="uid://cr3w6dkhf4tlr" path="res://Audio/261473__ivolipa__street_ambience_day_2.wav" id="10_deeqg"]
+[ext_resource type="Texture2D" uid="uid://b18glesqop2eg" path="res://Scenes/GameScene/Bubbles blink/bubbles_00000.png" id="9_x02s2"]
+[ext_resource type="Texture2D" uid="uid://drf2hfu606vy5" path="res://Scenes/GameScene/Bubbles blink/bubbles_00001.png" id="10_68lpx"]
 [ext_resource type="PackedScene" uid="uid://cik6nh0k3vldv" path="res://Scenes/PauseScreen/pause_screen.tscn" id="10_ebug7"]
+[ext_resource type="Texture2D" uid="uid://bbmkcl2o0lr8c" path="res://Scenes/GameScene/Bubbles blink/bubbles_00002.png" id="11_huovp"]
 [ext_resource type="AudioStream" uid="uid://br0o48iwlvflr" path="res://Music/Main180.mp3" id="11_njiyi"]
 [ext_resource type="AudioStream" uid="uid://bjbmjleoeo71u" path="res://Audio/Voice 250126_101747.mp3" id="12_1wk0l"]
+[ext_resource type="Texture2D" uid="uid://djh82icx4xxq5" path="res://Scenes/GameScene/Bubbles blink/bubbles_00003.png" id="12_v4gjy"]
+[ext_resource type="Texture2D" uid="uid://b4b1acmfqav7d" path="res://Scenes/GameScene/Bubbles blink/bubbles_00004.png" id="13_8ek83"]
+[ext_resource type="Texture2D" uid="uid://b15po1n6biflp" path="res://Scenes/GameScene/Bubbles blink/bubbles_00005.png" id="14_qp66r"]
+[ext_resource type="Texture2D" uid="uid://baqi0lo3nj2dj" path="res://Scenes/GameScene/Bubbles blink/bubbles_00006.png" id="15_enric"]
+[ext_resource type="Texture2D" uid="uid://cwqsk4dr6f5o5" path="res://Scenes/GameScene/Bubbles blink/bubbles_00007.png" id="16_66dv6"]
+[ext_resource type="Texture2D" uid="uid://bj6cg3cqxhy0s" path="res://Scenes/GameScene/Bubbles blink/bubbles_00008.png" id="17_r5ppj"]
+[ext_resource type="Texture2D" uid="uid://dmbsowa8slmv" path="res://Scenes/GameScene/Bubbles blink/bubbles_00009.png" id="18_d5133"]
+[ext_resource type="Texture2D" uid="uid://crvgova3t227" path="res://Scenes/GameScene/Bubbles blink/bubbles_00010.png" id="19_anrah"]
+[ext_resource type="Texture2D" uid="uid://vfk0spxtpks2" path="res://Scenes/GameScene/Bubbles blink/bubbles_00011.png" id="20_pq4yg"]
+[ext_resource type="Texture2D" uid="uid://2udqggg7iq04" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00052.png" id="21_qfu2l"]
+[ext_resource type="Texture2D" uid="uid://b86gvxu3md0lb" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00053.png" id="22_c6o0k"]
+[ext_resource type="Texture2D" uid="uid://bf7cabkdul2a" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00054.png" id="23_24ays"]
+[ext_resource type="Texture2D" uid="uid://ovvscebv1fyn" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00055.png" id="24_vjteh"]
+[ext_resource type="Texture2D" uid="uid://ci48dy2dtd68y" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00056.png" id="25_j6cvq"]
+[ext_resource type="Texture2D" uid="uid://cdb37yjxcvgeh" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00057.png" id="26_kfqor"]
+[ext_resource type="Texture2D" uid="uid://b7xwg10xok5g6" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00058.png" id="27_yohos"]
+[ext_resource type="Texture2D" uid="uid://b1myyv88qqt0m" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00059.png" id="28_u1ky1"]
+[ext_resource type="Texture2D" uid="uid://cpocnyd6tjdip" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00060.png" id="29_j7qy6"]
+[ext_resource type="Texture2D" uid="uid://dubtg1l8kw2vy" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00061.png" id="30_djx7w"]
+[ext_resource type="Texture2D" uid="uid://bgshyr631dhmg" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00062.png" id="31_h57se"]
+[ext_resource type="Texture2D" uid="uid://cd52lk422asev" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00063.png" id="32_jhkfc"]
+[ext_resource type="Texture2D" uid="uid://be2ecald4yw5b" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00064.png" id="33_bb1yw"]
+[ext_resource type="Texture2D" uid="uid://dawbuu0s2mm67" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00065.png" id="34_roguh"]
+[ext_resource type="Texture2D" uid="uid://bfy45083jjtjk" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00066.png" id="35_0cqxc"]
+[ext_resource type="Texture2D" uid="uid://x71wcbutsc4g" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00067.png" id="36_h7ye5"]
+[ext_resource type="Texture2D" uid="uid://b4cw23bnlq48i" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00068.png" id="37_tnpa6"]
+[ext_resource type="Texture2D" uid="uid://b4i1k2ul77ejh" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00069.png" id="38_uwwc6"]
+[ext_resource type="Texture2D" uid="uid://nvmxh722v8ic" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00070.png" id="39_jfmej"]
+[ext_resource type="Texture2D" uid="uid://dk0xfce87d0ft" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00071.png" id="40_yls71"]
+[ext_resource type="Texture2D" uid="uid://dop4gw07get1o" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00072.png" id="41_sq57m"]
+[ext_resource type="Texture2D" uid="uid://bk4544ixpdakl" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00073.png" id="42_jnxxc"]
+[ext_resource type="Texture2D" uid="uid://dj64wey00fdgp" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00074.png" id="43_mas45"]
+[ext_resource type="Texture2D" uid="uid://bmm1eoag4hjs0" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00075.png" id="44_f0n1s"]
+[ext_resource type="Texture2D" uid="uid://df71nqogyhb6r" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00076.png" id="45_gdfgq"]
+[ext_resource type="Texture2D" uid="uid://ciapq5prjouo5" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00077.png" id="46_dxquw"]
+[ext_resource type="Texture2D" uid="uid://bn6e36rmxd810" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00078.png" id="47_cv11e"]
+[ext_resource type="Texture2D" uid="uid://do6m1usg0y4wc" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00079.png" id="48_n2axt"]
+[ext_resource type="Texture2D" uid="uid://b1kpdl652qymc" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00080.png" id="49_pkqdb"]
+[ext_resource type="Texture2D" uid="uid://pnr5o7xxulj8" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00081.png" id="50_uvh1o"]
+[ext_resource type="Texture2D" uid="uid://bid5ke38yaa1h" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00082.png" id="51_6rrti"]
+[ext_resource type="Texture2D" uid="uid://dthwb8lg0x8xw" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00083.png" id="52_7a0ek"]
+[ext_resource type="Texture2D" uid="uid://dnxe7npaum6tx" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00084.png" id="53_ikr1s"]
+[ext_resource type="Texture2D" uid="uid://bbnb4rjdk13c" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00085.png" id="54_2t7tu"]
+[ext_resource type="Texture2D" uid="uid://cr6mc3fiwru2e" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00086.png" id="55_t7ano"]
+[ext_resource type="Texture2D" uid="uid://cmqqth0mebejs" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00087.png" id="56_ua5q3"]
+[ext_resource type="Texture2D" uid="uid://wcwuq8pthn8b" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00088.png" id="57_1bbor"]
+[ext_resource type="Texture2D" uid="uid://dh11a58v8k5xi" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00089.png" id="58_coo5y"]
+[ext_resource type="Texture2D" uid="uid://0vea2dtqbfeb" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00090.png" id="59_v57p0"]
+[ext_resource type="Texture2D" uid="uid://bxlpuuxhvy1f3" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00091.png" id="60_f7vp1"]
+[ext_resource type="Texture2D" uid="uid://cuyxpng5qbuyh" path="res://Scenes/GameScene/bubbles drink stir seq/bubbles_00092.png" id="61_wdjja"]
+[ext_resource type="Texture2D" uid="uid://35tiem8u7kog" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00025.png" id="62_w7ksb"]
+[ext_resource type="Texture2D" uid="uid://vqxq4825e3ph" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00026.png" id="63_io57h"]
+[ext_resource type="Texture2D" uid="uid://cfbg6g2veph3j" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00027.png" id="64_mxuk7"]
+[ext_resource type="Texture2D" uid="uid://cgouxduqtebu3" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00028.png" id="65_tn4wt"]
+[ext_resource type="Texture2D" uid="uid://u4hatvdaf8tp" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00029.png" id="66_sfhj4"]
+[ext_resource type="Texture2D" uid="uid://bsb02min1cfqw" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00030.png" id="67_rhaq7"]
+[ext_resource type="Texture2D" uid="uid://b1kf28ihi7lng" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00031.png" id="68_cljoi"]
+[ext_resource type="Texture2D" uid="uid://diy63fi12dqyt" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00032.png" id="69_dngk4"]
+[ext_resource type="Texture2D" uid="uid://ds85xdsfyibdl" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00033.png" id="70_8fy65"]
+[ext_resource type="Texture2D" uid="uid://dc2vjamsnghkd" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00034.png" id="71_6pco5"]
+[ext_resource type="Texture2D" uid="uid://cp4ejksnejx5m" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00035.png" id="72_y5wbc"]
+[ext_resource type="Texture2D" uid="uid://bjdny5glfuyms" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00036.png" id="73_l2nor"]
+[ext_resource type="Texture2D" uid="uid://bl52upc8fyapf" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00037.png" id="74_wwn7h"]
+[ext_resource type="Texture2D" uid="uid://c6uyrx0d4cmms" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00038.png" id="75_dktrk"]
+[ext_resource type="Texture2D" uid="uid://p0bd878gd18i" path="res://Scenes/GameScene/bubbles suck seq/bubbles_00039.png" id="76_1gqa8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjo0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_x02s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_68lpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_huovp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v4gjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8ek83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qp66r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_enric")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_66dv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_r5ppj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d5133")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_anrah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pq4yg")
+}],
+"loop": false,
+"name": &"Blink",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_qfu2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_c6o0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_24ays")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vjteh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j6cvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kfqor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yohos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_u1ky1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_j7qy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_djx7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_h57se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_jhkfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_bb1yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_roguh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_0cqxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_h7ye5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_tnpa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_uwwc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jfmej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_yls71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sq57m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jnxxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_mas45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_f0n1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_gdfgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dxquw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_cv11e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_n2axt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_pkqdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_uvh1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6rrti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_7a0ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ikr1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2t7tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_t7ano")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ua5q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_1bbor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_coo5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_v57p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_f7vp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_wdjja")
+}],
+"loop": true,
+"name": &"Drink",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_w7ksb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_io57h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_mxuk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_tn4wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_sfhj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_rhaq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_cljoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_dngk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8fy65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_6pco5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_y5wbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_l2nor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wwn7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_dktrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_1gqa8")
+}],
+"loop": true,
+"name": &"Suck",
+"speed": 30.0
+}]
 
 [node name="GameScene" type="Node2D"]
 process_mode = 3
@@ -56,10 +344,13 @@ position = Vector2(978, 898)
 [node name="Foreground" type="Node" parent="."]
 process_mode = 1
 
-[node name="PPG_Bubble" type="Sprite2D" parent="Foreground"]
-z_index = 11
-position = Vector2(334, 500)
-texture = ExtResource("6_3gmor")
+[node name="Bubble" type="AnimatedSprite2D" parent="Foreground"]
+position = Vector2(294, 550)
+sprite_frames = SubResource("SpriteFrames_pjo0o")
+animation = &"Blink"
+
+[node name="BubbleBlinkTimer" type="Timer" parent="Foreground/Bubble"]
+wait_time = 2.0
 
 [node name="IntroTimer" type="Timer" parent="."]
 one_shot = true
@@ -69,7 +360,6 @@ visible = false
 z_index = 12
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_deeqg")
 volume_db = 5.0
 
 [node name="AudioStreamPlayer2DMusic" type="AudioStreamPlayer2D" parent="."]
@@ -79,4 +369,5 @@ stream = ExtResource("11_njiyi")
 stream = ExtResource("12_1wk0l")
 volume_db = 12.0
 
+[connection signal="timeout" from="Foreground/Bubble/BubbleBlinkTimer" to="." method="_on_bubble_blink_timer_timeout"]
 [connection signal="timeout" from="IntroTimer" to="." method="_on_intro_timer_timeout"]
