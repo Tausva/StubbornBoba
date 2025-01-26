@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brp1leycoxbxy"
-path="res://.godot/imported/start clicked.png-d90f84809da41741c1dba63a6799fe34.ctex"
+uid="uid://tklumxxl3hcq"
+path="res://.godot/imported/start_blue.png-6312e1401e2749f0ed67d139b3528c69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Menu/start clicked.png"
-dest_files=["res://.godot/imported/start clicked.png-d90f84809da41741c1dba63a6799fe34.ctex"]
+source_file="res://Scenes/MainMenu/start_blue.png"
+dest_files=["res://.godot/imported/start_blue.png-6312e1401e2749f0ed67d139b3528c69.ctex"]
 
 [params]
 

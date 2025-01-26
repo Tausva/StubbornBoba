@@ -26,15 +26,19 @@ func _disconnect() -> void:
 
 
 func _on_bubble_victory() -> void:
-	await get_tree().create_timer(.4).timeout
-	print("bubble won!")
 	_disconnect()
+	
+	await get_tree().create_timer(.4).timeout
+	
+	get_tree().change_scene_to_file("res://Scenes/WinScreen/bubble_win_scene.tscn")
 
 
 func _on_straw_victory() -> void:
-	await get_tree().create_timer(.4).timeout
-	print("straw won!")
 	_disconnect()
+	
+	await get_tree().create_timer(.4).timeout
+	
+	get_tree().change_scene_to_file("res://Scenes/WinScreen/straw_win_scene.tscn")
 
 
 func _on_intro_timer_timeout() -> void:

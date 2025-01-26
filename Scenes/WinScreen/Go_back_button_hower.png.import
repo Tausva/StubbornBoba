@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtk4n653333f7"
-path="res://.godot/imported/quit clicked.png-ab8386ac3cb78455425f5a8c98a45c4b.ctex"
+uid="uid://ctw4ttqfnt5tg"
+path="res://.godot/imported/Go_back_button_hower.png-b31b8ddee396627b28aea052422957ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Menu/quit clicked.png"
-dest_files=["res://.godot/imported/quit clicked.png-ab8386ac3cb78455425f5a8c98a45c4b.ctex"]
+source_file="res://Scenes/WinScreen/Go_back_button_hower.png"
+dest_files=["res://.godot/imported/Go_back_button_hower.png-b31b8ddee396627b28aea052422957ae.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx04fsjda2cc8"
-path="res://.godot/imported/start unclicked.png-179e085273e4eb2a66afba838ee92e80.ctex"
+uid="uid://c8huiym2e8r4c"
+path="res://.godot/imported/Straw wins.png-e923acd83cd23453035648a7cd4a307e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu pause and winners/Menu/start unclicked.png"
-dest_files=["res://.godot/imported/start unclicked.png-179e085273e4eb2a66afba838ee92e80.ctex"]
+source_file="res://Scenes/WinScreen/Winners/Straw wins.png"
+dest_files=["res://.godot/imported/Straw wins.png-e923acd83cd23453035648a7cd4a307e.ctex"]
 
 [params]
 
