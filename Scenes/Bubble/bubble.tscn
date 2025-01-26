@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdeu8e0xtce2r"]
+[gd_scene load_steps=7 format=3 uid="uid://cdeu8e0xtce2r"]
 
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_1jhyk"]
 [ext_resource type="Texture2D" uid="uid://drfkcbmjuvecc" path="res://Scenes/Bubble/boba bubble.png" id="2_mkwq5"]
+[ext_resource type="AudioStream" uid="uid://h6hbw7q3c8xf" path="res://Audio/646165__atomic-potato__rocky-dash.mp3" id="3_l8lwo"]
 
 [sub_resource type="Gradient" id="Gradient_iycsv"]
 
@@ -46,6 +47,10 @@ debug_color = Color(0, 0.0745098, 0.701961, 0.419608)
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8hhyj")
 debug_color = Color(0.364639, 0.616593, 1.15514e-06, 0.42)
+
+[node name="DashAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l8lwo")
+volume_db = 10.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

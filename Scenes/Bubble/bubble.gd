@@ -90,6 +90,7 @@ func _start_dash(direction: Vector2) -> void:
 	dash_particles.emitting = true
 	dash_particles.rotation_degrees = dash_direction.angle() * 180 / PI + 180
 	dash_particles.local_coords = false
+	$DashAudio.play()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

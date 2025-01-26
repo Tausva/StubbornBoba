@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=3 uid="uid://c6sx8glb5y6bg"]
+[gd_scene load_steps=148 format=3 uid="uid://c6sx8glb5y6bg"]
 
 [ext_resource type="Script" path="res://Scenes/Cup/cup.gd" id="1_1japy"]
 [ext_resource type="Texture2D" uid="uid://cl4s762f2inkd" path="res://Scenes/Cup/Puodelio pagrindas.png" id="2_sr4ki"]
@@ -140,6 +140,7 @@
 [ext_resource type="Texture2D" uid="uid://c4eimjv6gv22g" path="res://Scenes/Cup/splash seq/splash_00008.png" id="137_2n5g8"]
 [ext_resource type="Texture2D" uid="uid://gafyq00kw5ra" path="res://Scenes/Cup/splash seq/splash_00009.png" id="138_oxgfc"]
 [ext_resource type="Texture2D" uid="uid://ctkeo5n3h77sm" path="res://Scenes/Cup/splash seq/splash_00010.png" id="139_2u6vc"]
+[ext_resource type="AudioStream" uid="uid://dwltnj6kfquac" path="res://Audio/568040__benkenart__coffee-slurp-8.mp3" id="141_acpnu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcdyu"]
 size = Vector2(734.559, 900)
@@ -651,3 +652,6 @@ collision_layer = 4
 position = Vector2(253.574, -940.964)
 shape = SubResource("RectangleShape2D_j21p3")
 debug_color = Color(0.935043, 0.177958, 0.464492, 0.42)
+
+[node name="SlurpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("141_acpnu")

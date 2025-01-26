@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 
 func drain(percentage: float) -> void:
 	fill_percentage -= percentage
-	
+	$SlurpAudio.play()
 	if fill_percentage < 0:
 		fill_percentage = 0
 		empty.emit()
