@@ -31,6 +31,7 @@ func _ready() -> void:
 	straw.suck_cooldown_started.connect(_on_straw_suck_cooldown_started)
 	bubble.dash_cooldown_started.connect(_on_bubble_dash_cooldown_started)
 	bubble.jump_cooldown_started.connect(_on_bubble_jump_cooldown_started)
+	cup.threasholf_reached.connect(_on_tea_threashold_reached)
 
 
 func _disconnect() -> void:
@@ -74,3 +75,6 @@ func _on_bubble_blink_timer_timeout() -> void:
 	var animations = ["Blink", "Drink", "Suck"]
 	var random_animation = animations[randi() % animations.size()]
 	$Foreground/Bubble.play(random_animation)
+
+func _on_tea_threashold_reached() -> void:
+	bubble.enable_jumping()

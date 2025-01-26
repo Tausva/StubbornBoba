@@ -1,6 +1,7 @@
 class_name Cup extends StaticBody2D
 
 signal empty
+signal threasholf_reached
 
 @onready var tea_collision_shape: CollisionShape2D = $Tea/CollisionShape
 @onready var tea_sprite: Sprite2D = $Tea/CupShapeSprite/TeaSprite
@@ -8,6 +9,8 @@ signal empty
 @onready var boba_activation_zone: Area2D = $BobaActivationZone
 @onready var boba_no_go_zone: StaticBody2D = $BobaNoGoZone
 @onready var surface_waves: AnimatedSprite2D = $Tea/CupShapeSprite/SurfaceWaves
+
+@export var jump_threashold: float = .85 
 
 var fill_percentage: float = 1.0
 var original_tea_height: float
@@ -30,6 +33,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	print(fill_percentage)
 	if Input.is_key_pressed(KEY_F):
 		drain(.01)
 
@@ -42,6 +46,9 @@ func drain(percentage: float) -> void:
 		empty.emit()
 	
 	_update_play_area()
+	
+	if fill_percentage <= jump_threashold:
+		threasholf_reached.emit()
 
 
 func _update_play_area() -> void:

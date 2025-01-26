@@ -26,6 +26,7 @@ scale = Vector2(10, 165)
 texture = ExtResource("3_f5wv7")
 
 [node name="Filled" type="Sprite2D" parent="Filter"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 scale = Vector2(10, 170)
 texture = ExtResource("3_f5wv7")

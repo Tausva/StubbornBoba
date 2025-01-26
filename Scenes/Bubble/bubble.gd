@@ -24,6 +24,7 @@ var jump_cooldown_timer: float = 0.0
 var can_jump: bool = false
 var jump_activated: bool = false
 var is_above_water: bool = false
+var jump_enabled: bool = false
 
 
 func _ready() -> void:
@@ -64,13 +65,18 @@ func _physics_process(delta: float) -> void:
 		if jump_cooldown_timer < 0:
 			jump_cooldown_timer = 0
 	
-	if jump_cooldown_timer <= 0:
+	if jump_cooldown_timer <= 0 and jump_enabled:
 		can_jump = true
 
 	if Input.is_action_just_pressed("bubble_dash") and dash_cooldown_timer <= 0 and direction != Vector2.ZERO:
 		_start_dash(direction)
 	
 	move_and_slide()
+
+
+func enable_jumping() -> void:
+	jump_enabled = true
+	jump_cooldown_started.emit(.1)
 
 
 func die() -> void:
