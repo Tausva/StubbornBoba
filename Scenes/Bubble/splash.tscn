@@ -1,0 +1,75 @@
+[gd_scene load_steps=14 format=3 uid="uid://csygbvl1yrhd"]
+
+[ext_resource type="Script" path="res://splash.gd" id="1_x1fiw"]
+[ext_resource type="Texture2D" uid="uid://qjgikv4xpwyt" path="res://Scenes/Cup/splash seq/splash_00000.png" id="2_qmsoc"]
+[ext_resource type="Texture2D" uid="uid://daqvsf7c1sbeb" path="res://Scenes/Cup/splash seq/splash_00001.png" id="3_n7666"]
+[ext_resource type="Texture2D" uid="uid://dbo88nef17kwt" path="res://Scenes/Cup/splash seq/splash_00002.png" id="4_ii6vj"]
+[ext_resource type="Texture2D" uid="uid://dwikm3h0wr4yc" path="res://Scenes/Cup/splash seq/splash_00003.png" id="5_g647y"]
+[ext_resource type="Texture2D" uid="uid://kl555f6xciic" path="res://Scenes/Cup/splash seq/splash_00004.png" id="6_2rsqu"]
+[ext_resource type="Texture2D" uid="uid://d38oxykoi8dg2" path="res://Scenes/Cup/splash seq/splash_00005.png" id="7_ts5rl"]
+[ext_resource type="Texture2D" uid="uid://d30y3c5ug7tgu" path="res://Scenes/Cup/splash seq/splash_00006.png" id="8_k7tse"]
+[ext_resource type="Texture2D" uid="uid://di82jigk5ksqg" path="res://Scenes/Cup/splash seq/splash_00007.png" id="9_pwsut"]
+[ext_resource type="Texture2D" uid="uid://c4eimjv6gv22g" path="res://Scenes/Cup/splash seq/splash_00008.png" id="10_mjvrw"]
+[ext_resource type="Texture2D" uid="uid://gafyq00kw5ra" path="res://Scenes/Cup/splash seq/splash_00009.png" id="11_8pasn"]
+[ext_resource type="Texture2D" uid="uid://ctkeo5n3h77sm" path="res://Scenes/Cup/splash seq/splash_00010.png" id="12_f28k6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y76od"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qmsoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7666")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ii6vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g647y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2rsqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ts5rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k7tse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwsut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mjvrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8pasn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f28k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qmsoc")
+}],
+"loop": false,
+"name": &"Splash",
+"speed": 30.0
+}]
+
+[node name="Splash" type="Node2D"]
+script = ExtResource("1_x1fiw")
+
+[node name="WaterSplash" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y76od")
+animation = &"Splash"
+autoplay = "Splash"
+frame = 11
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.34
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

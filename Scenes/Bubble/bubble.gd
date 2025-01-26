@@ -101,6 +101,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		call_deferred("_collision_shape_water_disabled")
 		jump_activated = true
 		velocity.y = -jump_velocity
+		_make_splash()
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
@@ -116,6 +117,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		is_above_water = false
 		jump_cooldown_timer = jump_cooldown
 		jump_cooldown_started.emit(jump_cooldown)
+		_make_splash()
 
 
 func _collision_shape_water_disabled() -> void:
@@ -124,3 +126,10 @@ func _collision_shape_water_disabled() -> void:
 
 func _collision_shape_water_enabled() -> void:
 	collision_shape_water.disabled = false
+
+
+func _make_splash() -> void:
+	var splash_scene: PackedScene = preload("res://Scenes/Bubble/splash.tscn")
+	var splash = splash_scene.instantiate()
+	get_parent().add_child(splash)
+	splash.global_position = global_position + Vector2(0, -200)

@@ -27,7 +27,7 @@ func _ready() -> void:
 	var animationName: String = animated_sprite.animation
 	var spriteFrames: SpriteFrames = animated_sprite.get_sprite_frames()
 	var currentTexture: Texture2D = spriteFrames.get_frame_texture(animationName, frameIndex)
-
+	
 	sprite_half_height = currentTexture.get_height() * animated_sprite.scale.y / 2
 
 

@@ -32,12 +32,6 @@ func _ready() -> void:
 	original_surface_waves_position = surface_waves.position.y
 
 
-func _process(delta: float) -> void:
-	print(fill_percentage)
-	if Input.is_key_pressed(KEY_F):
-		drain(.01)
-
-
 func drain(percentage: float) -> void:
 	fill_percentage -= percentage
 	$SlurpAudio.play()

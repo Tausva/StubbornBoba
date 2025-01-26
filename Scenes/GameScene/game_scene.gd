@@ -76,5 +76,6 @@ func _on_bubble_blink_timer_timeout() -> void:
 	var random_animation = animations[randi() % animations.size()]
 	$Foreground/Bubble.play(random_animation)
 
+
 func _on_tea_threashold_reached() -> void:
 	bubble.enable_jumping()
