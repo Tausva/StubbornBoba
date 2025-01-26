@@ -29,6 +29,11 @@ func _ready() -> void:
 	original_surface_waves_position = surface_waves.position.y
 
 
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_F):
+		drain(.01)
+
+
 func drain(percentage: float) -> void:
 	fill_percentage -= percentage
 	
@@ -46,8 +51,8 @@ func _update_play_area() -> void:
 	tea_sprite.scale.y = original_tea_sprite_scale * fill_percentage
 	tea_sprite.position.y = 530 * (1 - fill_percentage) + original_tea_sprite_position * fill_percentage
 	
-	surface_waves.position.y = 530 * (1 - fill_percentage) + original_surface_waves_position * fill_percentage #fix scaling
+	surface_waves.position.y = 434 * (1 - fill_percentage) + original_surface_waves_position * fill_percentage
 	
-	boba_activation_zone.position.y = original_boba_activation_zone_positon * fill_percentage #fix scaling
+	boba_activation_zone.position.y = 852  * (1 - fill_percentage) + original_boba_activation_zone_positon * fill_percentage
 	
-	boba_no_go_zone.position.y = original_boba_no_go_zone_position * fill_percentage #fix scaling
+	boba_no_go_zone.position.y = 838  * (1 - fill_percentage) + original_boba_no_go_zone_position * fill_percentage

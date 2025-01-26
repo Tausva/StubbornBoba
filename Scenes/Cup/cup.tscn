@@ -637,17 +637,17 @@ position = Vector2(248.542, -525.195)
 texture = ExtResource("4_xukgq")
 
 [node name="BobaActivationZone" type="Area2D" parent="." groups=["water_filter"]]
-position = Vector2(253.574, -880.324)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BobaActivationZone" groups=["water_filter"]]
+position = Vector2(253.574, -880.324)
 shape = SubResource("RectangleShape2D_pcj8r")
 debug_color = Color(7.60466e-06, 0.864472, 0.229935, 0.42)
 
 [node name="BobaNoGoZone" type="StaticBody2D" parent="."]
-position = Vector2(253.574, -940.964)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BobaNoGoZone" groups=["baba_no_go_zone"]]
+position = Vector2(253.574, -940.964)
 shape = SubResource("RectangleShape2D_j21p3")
 debug_color = Color(0.935043, 0.177958, 0.464492, 0.42)
